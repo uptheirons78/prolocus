@@ -1,0 +1,47 @@
+{
+  "name": "proloco-nepi",
+  "private": true,
+  "description": "Sito Web della Pro Loco del Comune di Nepi (VT)",
+  "version": "1.0.0",
+  "author": "Mauro Bono <maurobono@maurobono.com>",
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.15.28",
+    "gatsby-image": "^2.2.23",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.27",
+    "gatsby-plugin-styled-components": "^3.1.8",
+    "gatsby-source-contentful": "^2.1.45",
+    "gatsby-source-filesystem": "^2.1.28",
+    "gatsby-transformer-sharp": "^2.2.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "env-cmd -f .env.development gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uptheirons78/prolocus.git"
+  }
+}
