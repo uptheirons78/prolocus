@@ -12,7 +12,6 @@ const handleSizeType = size => {
 };
 
 export default styled.a`
-  margin: 1rem 0.5rem;
   color: #fff;
   background: var(--primary-color);
   padding: ${({ size }) => handleSizeType(size)};
