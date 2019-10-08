@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
+
+    @media screen and (max-width: 599px) {
+      font-size: 15px;
+    }
   }
   body {
     font-family: "Roboto", sans-serif;

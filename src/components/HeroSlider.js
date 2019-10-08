@@ -78,9 +78,9 @@ const SliderContainer = styled.section`
     position: absolute;
     letter-spacing: 2px;
     text-align: left;
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 0 3rem;
 
     .logo-container {
       width: 10rem;
@@ -100,13 +100,13 @@ const SliderContainer = styled.section`
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       margin-bottom: 1.5rem;
       color: #fff;
       text-transform: uppercase;
 
       @media screen and (max-width: 599px) {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
 
       @media screen and (min-width: 600px) and (max-width: 899px) {
