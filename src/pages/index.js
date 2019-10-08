@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql, useStaticQuery } from "gatsby";
+import HeroSlider from "../components/HeroSlider";
 import CardEvento from "../components/CardEvento";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import Container from "../components/styled/Container";
@@ -31,6 +32,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <HeroSlider />
       <section className="eventi">
         <Container className="container">
           <SectionTitle>Eventi e Manifestazioni</SectionTitle>
