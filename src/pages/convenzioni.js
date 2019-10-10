@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
 
-const Convenzioni = () => {
+const Convenzioni = ({ location }) => {
   const contentfulData = useStaticQuery(graphql`
     query {
       allContentfulConvenzioni {
@@ -26,7 +26,7 @@ const Convenzioni = () => {
   const convenzioni = contentfulData.allContentfulConvenzioni.edges;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>Convenzioni per i soci della Pro Loco Nepi</h1>
       <p>
         La Pro Loco di Nepi si e’ prefissata il compito di rendere visibili le

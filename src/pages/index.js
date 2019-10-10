@@ -5,9 +5,9 @@ import HeroSlider from "../components/HeroSlider";
 import Info from "../components/Info";
 import Eventi from "../components/Eventi";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Home" />
       <HeroSlider />
       <Info />

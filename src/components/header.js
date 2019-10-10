@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const Header = ({ siteTitle, toggler }) => {
+const Header = ({ siteTitle, toggler, headerClass }) => {
   const pages = [
     { name: "Eventi", path: "/eventi" },
     { name: "Cosa Vedere", path: "/monumenti" },
@@ -12,7 +12,7 @@ const Header = ({ siteTitle, toggler }) => {
   ];
 
   return (
-    <StyledHeader className={toggler}>
+    <StyledHeader className={`${toggler} ${headerClass}`}>
       <Link to="/" className="logo">
         <h1>
           PROLOCO <span>NEPI</span>
@@ -50,6 +50,15 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
+
+  &.static-header {
+    position: static;
+    background-color: rgba(0, 0, 0, 1);
+
+    @media screen and (max-width: 900px) {
+      position: absolute;
+    }
+  }
 
   @media screen and (max-width: 900px) {
     flex-direction: column;

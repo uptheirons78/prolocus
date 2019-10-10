@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
-const Eventi = () => {
+const Eventi = ({ location }) => {
   const contentfulData = useStaticQuery(graphql`
     query {
       allContentfulEventi(sort: { fields: data, order: DESC }) {
@@ -24,7 +24,7 @@ const Eventi = () => {
   const eventi = contentfulData.allContentfulEventi.edges;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>Eventi</h1>
       <ol className="eventi">
         {eventi.map(evento => {

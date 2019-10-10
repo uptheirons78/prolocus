@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
-const Ristoranti = () => {
+const Ristoranti = ({ location }) => {
   const contentfulData = useStaticQuery(graphql`
     query {
       allContentfulRistoranti {
@@ -25,7 +25,7 @@ const Ristoranti = () => {
   const ristoranti = contentfulData.allContentfulRistoranti.edges;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>Ristoranti</h1>
       <ol className="ristoranti">
         {ristoranti.map(ristorante => {

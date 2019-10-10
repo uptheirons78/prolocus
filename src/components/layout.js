@@ -6,10 +6,12 @@ import styled from "styled-components";
 import Header from "./header";
 import Footer from "./footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const [togglerState, setTogglerState] = useState(false);
   const toggler = togglerState ? "header open" : "header";
   const togglerContent = togglerState ? "Close" : "Menu";
+  const headerClass =
+    location.pathname === "/" ? "home-header" : "static-header";
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,7 +26,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header toggler={toggler} siteTitle={data.site.siteMetadata.title} />
+      <Header
+        headerClass={headerClass}
+        toggler={toggler}
+        siteTitle={data.site.siteMetadata.title}
+      />
       <div>
         <main>{children}</main>
       </div>
