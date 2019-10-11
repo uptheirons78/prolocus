@@ -39,7 +39,7 @@ const Ristoranti = ({ location }) => {
           } = ristorante.node;
           return (
             <li key={id} className="ristorante">
-              <Link to={`/ristoranti/${slug}`}>
+              <Link to={`/dove-mangiare/${slug}`}>
                 <h2>{nome}</h2>
               </Link>
               <p>

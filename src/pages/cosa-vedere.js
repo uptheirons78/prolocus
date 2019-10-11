@@ -26,7 +26,7 @@ const Monumenti = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <h1>Monumenti</h1>
+      <h1>Cosa Vedere</h1>
       <ol className="eventi">
         {monumenti.map(monumento => {
           const {
@@ -39,7 +39,7 @@ const Monumenti = ({ location }) => {
           } = monumento.node;
           return (
             <li key={id} className="monumento">
-              <Link to={`/monumenti/${slug}`}>
+              <Link to={`/cosa-vedere/${slug}`}>
                 <h2>{titolo}</h2>
               </Link>
               <p>

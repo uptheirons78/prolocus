@@ -22,8 +22,8 @@ const StyledVideo = styled.div`
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.6),
+    0px 3px 20px 8px rgba(0, 0, 0, 0.4);
 
   iframe {
     position: absolute;

@@ -5,9 +5,9 @@ import styled from "styled-components";
 const Header = ({ siteTitle, toggler, headerClass }) => {
   const pages = [
     { name: "Eventi", path: "/eventi" },
-    { name: "Cosa Vedere", path: "/monumenti" },
-    { name: "Dove Mangiare", path: "/ristoranti" },
-    { name: "Dove Dormire", path: "/ristoranti" },
+    { name: "Cosa Vedere", path: "/cosa-vedere" },
+    { name: "Dove Mangiare", path: "/dove-mangiare" },
+    { name: "Dove Dormire", path: "/dove-mangiare" },
     { name: "Convenzioni", path: "/convenzioni" },
   ];
 
@@ -44,7 +44,7 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1.2rem 10%;
+  padding: 1.2rem 3rem;
   background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;

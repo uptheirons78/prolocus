@@ -4,6 +4,7 @@ import { SectionTitle, SectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
 import styled from "styled-components";
 import image from "../images/fake-image.jpg";
+import { items } from "../data/data";
 
 const Mosaic = () => {
   return (
@@ -15,22 +16,19 @@ const Mosaic = () => {
           reprehenderit adipisci.
         </SectionSubTitle>
         <div className="grid-container">
-          <div className="grid-item">
-            <Link to="/monumenti">
-              <div className="content">
-                <h4>Cosa Vedere</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Similique, quia odio? Cumque.
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div className="grid-item">lorem</div>
-          <div className="grid-item">lorem</div>
-          <div className="grid-item">lorem</div>
-          <div className="grid-item">lorem</div>
-          <div className="grid-item">lorem</div>
+          {items.map(item => (
+            <div
+              className="grid-item"
+              style={{ backgroundImage: `url(${item.img})` }}
+            >
+              <Link to={item.url}>
+                <div className="content">
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </Container>
     </SectionDiscoverUs>
@@ -49,6 +47,7 @@ const SectionDiscoverUs = styled.section`
     grid-template-rows: repeat(2, 15rem);
     grid-gap: 0.5rem;
 
+
     @media screen and (max-width: 820px) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 15rem);
@@ -59,7 +58,7 @@ const SectionDiscoverUs = styled.section`
     }
 
     .grid-item {
-      background-image: url(${image});
+      /* background-image: url(${image}); */
       background-size: cover;
       background-position: center;
       position: relative;
@@ -80,13 +79,17 @@ const SectionDiscoverUs = styled.section`
         h4 {
           display: inline-block;
           color: #fff;
-          background-color: rgba(40, 167, 169, 0.9);
+          background-color: var(--primary-color-lighter);
           font-weight: 700;
-          font-size: 1.2rem;
+          font-size: 1rem;
+          /* text-shadow: 2px 2px var(--primary-color); */
           margin-bottom: 2rem;
           text-transform: uppercase;
           letter-spacing: 2px;
           padding: 0.3rem;
+        }
+        p {
+          font-size: 0.9rem;
         }
       }
 

@@ -69,7 +69,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   monumentiResponse.data.allContentfulMonumenti.edges.forEach(edge => {
     createPage({
       component: monumentiTemplate,
-      path: `/monumenti/${edge.node.slug}`,
+      path: `/cosa-vedere/${edge.node.slug}`,
       context: {
         slug: edge.node.slug,
       },
@@ -79,7 +79,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   ristorantiResponse.data.allContentfulRistoranti.edges.forEach(edge => {
     createPage({
       component: ristorantiTemplate,
-      path: `/ristoranti/${edge.node.slug}`,
+      path: `/dove-mangiare/${edge.node.slug}`,
       context: {
         slug: edge.node.slug,
       },
