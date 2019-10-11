@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { SectionTitle, SectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
 import styled from "styled-components";
@@ -15,13 +16,15 @@ const Mosaic = () => {
         </SectionSubTitle>
         <div className="grid-container">
           <div className="grid-item">
-            <div className="content">
-              <h4>titolo</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Similique, quia odio? Cumque.
-              </p>
-            </div>
+            <Link to="/monumenti">
+              <div className="content">
+                <h4>Cosa Vedere</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Similique, quia odio? Cumque.
+                </p>
+              </div>
+            </Link>
           </div>
           <div className="grid-item">lorem</div>
           <div className="grid-item">lorem</div>
@@ -66,16 +69,30 @@ const SectionDiscoverUs = styled.section`
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
         overflow: hidden;
         width: 100%;
-        height: 0;
-        transition: 0.5s ease;
-        color: #fff;
+        height: 25%;
+        transition: all 0.5s ease;
+        color: var(--white);
+        padding: 1rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0);
+
+        h4 {
+          display: inline-block;
+          color: #fff;
+          background-color: rgba(40, 167, 169, 0.9);
+          font-weight: 700;
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          padding: 0.3rem;
+        }
       }
 
       &:hover .content {
         height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
       }
 
       &:nth-child(1) {

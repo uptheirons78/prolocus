@@ -3,8 +3,15 @@ import styled from "styled-components";
 export default styled.article`
   margin-top: 2vh;
   padding: 0.7rem;
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.2),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
+    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.35s ease;
+
+  &:hover {
+    transform: translateY(-2%);
+    box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.6),
+      0px 3px 20px 8px rgba(0, 0, 0, 0.3);
+  }
 
   .thumbnail {
     width: 100%;
@@ -20,7 +27,7 @@ export default styled.article`
       position: absolute;
       top: 0;
       right: 0;
-      background: var(--primary-color);
+      background: var(--primary-color-lighter);
       color: #fff;
       padding: 0.5rem;
       text-transform: capitalize;
@@ -28,7 +35,9 @@ export default styled.article`
   }
 
   h6 {
-    color: var(--primary-color);
+    color: var(--primary-color-lighter);
+    font-weight: 400;
+    /* text-transform: uppercase; */
     font-size: 1.3rem;
     line-height: 1.4rem;
     margin-top: 1rem;
@@ -45,8 +54,12 @@ export default styled.article`
   .read-more {
     display: inline-block;
     margin-top: 1rem;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.3rem 0.5rem;
+    color: var(--primary-color-lighter);
+    font-weight: 400;
+    /* text-transform: uppercase; */
+
+    svg {
+      transform: translate(20%, 15%);
+    }
   }
 `;

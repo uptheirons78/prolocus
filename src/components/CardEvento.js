@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import image from "../images/fake-image.jpg";
 import ArticleCard from "../components/styled/ArticleCard";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const CardEvento = props => {
   const excerpt = props.data.descrizione.descrizione.slice(0, 120);
@@ -18,7 +19,10 @@ const CardEvento = props => {
       </Link>
       <p>{excerpt} ...</p>
       <Link className="read-more" to={`/eventi/${props.data.slug}`}>
-        Continua a leggere
+        <span>Leggi tutto </span>
+        <span>
+          <FaLongArrowAltRight />
+        </span>
       </Link>
     </ArticleCard>
   );
