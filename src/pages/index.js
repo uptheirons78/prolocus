@@ -5,6 +5,7 @@ import HeroSlider from "../components/HeroSlider";
 import Info from "../components/Info";
 import Eventi from "../components/Eventi";
 import Mosaic from "../components/Mosaic";
+import Contatti from "../components/Contatti";
 
 const IndexPage = ({ location }) => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = ({ location }) => {
       <Info />
       <Eventi />
       <Mosaic />
+      <Contatti />
     </Layout>
   );
 };
