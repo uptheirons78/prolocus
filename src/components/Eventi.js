@@ -19,6 +19,11 @@ const Eventi = () => {
             descrizione {
               descrizione
             }
+            immagine {
+              fluid {
+                src
+              }
+            }
           }
         }
       }

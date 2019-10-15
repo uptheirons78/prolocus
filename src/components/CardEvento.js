@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import image from "../images/fake-image.jpg";
+// import image from "../images/fake-image.jpg";
 import ArticleCard from "../components/styled/ArticleCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -10,7 +10,7 @@ const CardEvento = props => {
     <ArticleCard>
       <div className="thumbnail">
         <figure>
-          <img src={image} alt={props.data.titolo} />
+          <img src={props.data.immagine.fluid.src} alt={props.data.titolo} />
           <figcaption>{props.data.data}</figcaption>
         </figure>
       </div>
