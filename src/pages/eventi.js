@@ -86,6 +86,9 @@ const Title = styled(SectionTitle)`
   }
 `;
 const SubTitle = styled(SectionSubTitle)`
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   color: var(--white);
   padding: 1rem 2rem;
 `;
