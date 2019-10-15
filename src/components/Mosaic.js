@@ -12,8 +12,12 @@ const Mosaic = () => {
       <Container>
         <SectionTitle>Vieni a trovarci</SectionTitle>
         <SectionSubTitle>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error
-          reprehenderit adipisci.
+          Nepi è un paese fantastico da vedere sia in estate che in inverno.
+          Potrete ammirare gli incredibili colori della natura che lo circonda,
+          le mura farnesiane, la Rocca dei Borgia o la bellezza della Cattedrale
+          di Santa Maria Assunta. Durante il vostro soggiorno potrete gustare
+          fantastici prodotti locali o prendere parte agli eventi culturali che
+          si tengono durante tutto l'anno.
         </SectionSubTitle>
         <div className="grid-container">
           {items.map(item => (
@@ -81,8 +85,7 @@ const SectionDiscoverUs = styled.section`
           color: #fff;
           background-color: var(--primary-color-lighter);
           font-weight: 700;
-          font-size: 1rem;
-          /* text-shadow: 2px 2px var(--primary-color); */
+          font-size: 0.8rem;
           margin-bottom: 2rem;
           text-transform: uppercase;
           letter-spacing: 2px;

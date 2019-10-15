@@ -9,42 +9,42 @@ const items = [
   {
     title: "cosa vedere",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      'La Rocca dei Borgia, i Bastioni Farnesiani, le Catacombe di Santa Savinilla o le Vie Cave detti "Cavoni" sono solo alcuni dei meravigliosi luoghi da visitare sul nostro territorio.',
     url: "/cosa-vedere",
     img: cosaVedereImg,
   },
   {
     title: "dove mangiare",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      "Nepi offre una varietà di trattorie e ristoranti dove potrete degustare la nostra cucina locale e soddisfare il vostro palato.",
     url: "/dove-mangiare",
     img: doveMangiareImg,
   },
   {
     title: "dove dormire",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      "Qualora voleste prolungare il vostro soggiorno a Nepi potrete usufruire delle strutture ricettive presenti sul territorio.",
     url: "/dove-dormire",
     img: doveDormireImg,
   },
   {
     title: "eccellenze locali",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      "Salame Cotto, Pecorino Romano e la nostra Cipolla di Nepi sono soltanto alcune delle eccellenze enogastronomiche che potrete gustare sul nostro territorio.",
     url: "/eccellenze-locali",
     img: eccellenzeImg,
   },
   {
     title: "prossimi eventi",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      "Molti sono gli eventi culturali ed enogastronomici che si tengono sul nostro territorio durante l'anno, qui potrai scoprire quali saranno i prossimi",
     url: "/eventi",
     img: eventiImg,
   },
   {
     title: "le nostre convenzioni",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error reprehenderit adipisci.",
+      "La Proloco Nepi ha stipulato convenzioni con diversi esercizi ed attività locali che permettono ai suoi tesserati di ottenere sconti e vantaggi.",
     url: "/convenzioni",
     img: convenzioniImg,
   },

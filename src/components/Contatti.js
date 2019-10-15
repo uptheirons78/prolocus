@@ -3,16 +3,19 @@ import Container from "./styled/Container";
 import { SectionSubTitle, SectionTitle } from "./styled/Typography";
 import styled from "styled-components";
 import { FiPhoneCall, FiClock, FiMap } from "react-icons/fi";
+import bgImg from "../images/bg-contatti.jpg";
 
 const Contatti = () => {
   return (
     <SectionContatti>
       <Container>
         <ContattiTitle>Come Contattarci</ContattiTitle>
-        <SectionSubTitle>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error
-          reprehenderit adipisci.
-        </SectionSubTitle>
+        <ContattiSubTitle>
+          Gli uffici della Proloco Nepi sono aperti tutti i giorni. Per
+          contattarci potete chiamarci telefonicamente o semplicemente inviare
+          una email. Faremo in modo di metterci in contatto e soddisfare le
+          vostre richieste.
+        </ContattiSubTitle>
         <div className="contacts-container">
           <div className="contact-card">
             <h4>
@@ -55,9 +58,16 @@ export default Contatti;
 const ContattiTitle = styled(SectionTitle)`
   color: #fff;
 `;
+const ContattiSubTitle = styled(SectionSubTitle)`
+  color: #d5d5d5;
+`;
 
 const SectionContatti = styled.section`
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  background-image: url(${bgImg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 3vh 0;
 
   .contacts-container {
@@ -72,11 +82,11 @@ const SectionContatti = styled.section`
       padding: 4rem 1rem;
       box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
         0px 3px 20px 8px rgba(0, 0, 0, 0.2);
-      background-color: #fff;
+      background-color: rgba(0, 0, 0, 0.4);
 
       h4 {
         font-size: 1.4rem;
-        color: var(--primary-color);
+        color: var(--primary-color-lighter);
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2rem;
@@ -87,7 +97,7 @@ const SectionContatti = styled.section`
       }
 
       p {
-        color: var(--meta-color);
+        color: var(--white);
       }
     }
   }
