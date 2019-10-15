@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from "gatsby";
-// import image from "../images/fake-image.jpg";
 import ArticleCard from "../components/styled/ArticleCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import DefaultImg from "../images/default.jpg";
 
 const CardEvento = props => {
   const excerpt = props.data.descrizione.descrizione.slice(0, 120);
+
+  /** Image: Default or Contentful one */
+  const img =
+    props.data.immagine !== null ? props.data.immagine.fluid.src : DefaultImg;
+
   return (
     <ArticleCard>
       <div className="thumbnail">
         <figure>
-          <img src={props.data.immagine.fluid.src} alt={props.data.titolo} />
+          <img src={img} alt={props.data.titolo} />
           <figcaption>{props.data.data}</figcaption>
         </figure>
       </div>

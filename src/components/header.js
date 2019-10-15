@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const Header = ({ siteTitle, toggler, headerClass }) => {
+const Header = ({ siteTitle, toggler }) => {
   const pages = [
     { name: "Eventi", path: "/eventi" },
     { name: "Cosa Vedere", path: "/cosa-vedere" },
@@ -12,7 +12,7 @@ const Header = ({ siteTitle, toggler, headerClass }) => {
   ];
 
   return (
-    <StyledHeader className={`${toggler} ${headerClass}`}>
+    <StyledHeader className={`${toggler}`}>
       <Link to="/" className="logo">
         <h1>
           PROLOCO <span>NEPI</span>
