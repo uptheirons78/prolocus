@@ -22,6 +22,7 @@ const Mosaic = () => {
         <div className="grid-container">
           {items.map(item => (
             <div
+              key={item.title}
               className="grid-item"
               style={{ backgroundImage: `url(${item.img})` }}
             >

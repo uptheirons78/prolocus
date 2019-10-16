@@ -7,9 +7,8 @@ const Video = props => {
       <iframe
         title="iframe title"
         src={props.src}
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
       ></iframe>
     </StyledVideo>
   );

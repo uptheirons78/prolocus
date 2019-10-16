@@ -37,10 +37,11 @@ const Eventi = () => {
       <Container className="container">
         <SectionTitle>Eventi</SectionTitle>
         <SectionSubTitle>
-          La Pro Loco Nepi ed altre associazioni che operano sul nostro
-          territorio organizzano durante l'anno diverse manifestazioni culturali
-          ed enogastronomiche. Vieni a trovarci per scoprire le meraviglie del
-          nostro paese.
+          Le Festività Patronali in onore dei S.S. Romano e Tolomeo, la Sagra
+          del Pecorino Romano e del Salame Cotto, il Natale dei Bambini e la
+          Sagra della Cipolla Nepesina sono soltanto alcuni esempi delle diverse
+          manifestazioni culturali ed enogastronomiche che vengono organizzate
+          annualmente sul nostro territorio.
         </SectionSubTitle>
         <ArticlesContainer>
           {eventi.map(evento => (

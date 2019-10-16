@@ -6,6 +6,15 @@ import Info from "../components/Info";
 import Eventi from "../components/Eventi";
 import Mosaic from "../components/Mosaic";
 import Contatti from "../components/Contatti";
+import Mappa from "../components/Mappa";
+
+const coordinate = [
+  {
+    nome: "sede",
+    lat: 42.242075,
+    lng: 12.347944,
+  },
+];
 
 const IndexPage = ({ location }) => {
   return (
@@ -16,6 +25,7 @@ const IndexPage = ({ location }) => {
       <Eventi />
       <Mosaic />
       <Contatti />
+      <Mappa coordinate={coordinate} />
     </Layout>
   );
 };
