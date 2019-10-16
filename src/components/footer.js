@@ -21,11 +21,7 @@ const Footer = () => {
           </li>
           {"|"}
           <li>
-            <Link to="/">Cookies</Link>
-          </li>
-          {"|"}
-          <li>
-            <Link to="/">Accessibilità</Link>
+            <Link to="/">Cookies Policy</Link>
           </li>
         </ul>
       </div>
@@ -46,11 +42,17 @@ const FooterContainer = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
   }
 
   p {
     color: var(--meta-color);
     font-size: 1rem;
+
+    @media screen and (max-width: 400px) {
+      font-size: 0.9rem;
+      text-align: center;
+    }
   }
 
   a,
@@ -60,6 +62,10 @@ const FooterContainer = styled.footer`
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media screen and (max-width: 400px) {
+      font-size: 0.9rem;
+    }
   }
 
   .footer-navigation {
@@ -75,6 +81,9 @@ const FooterContainer = styled.footer`
     a {
       display: inline-block;
       font-size: 1rem;
+      @media screen and (max-width: 400px) {
+        font-size: 0.9rem;
+      }
     }
 
     @media screen and (max-width: 900px) {

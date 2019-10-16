@@ -37,8 +37,10 @@ const Eventi = () => {
       <Container className="container">
         <SectionTitle>Eventi</SectionTitle>
         <SectionSubTitle>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse error
-          reprehenderit adipisci.
+          La Pro Loco Nepi ed altre associazioni che operano sul nostro
+          territorio organizzano durante l'anno diverse manifestazioni culturali
+          ed enogastronomiche. Vieni a trovarci per scoprire le meraviglie del
+          nostro paese.
         </SectionSubTitle>
         <ArticlesContainer>
           {eventi.map(evento => (

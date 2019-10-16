@@ -7,6 +7,7 @@ const SectionTitle = styled.h4`
 `;
 const SectionSubTitle = styled.p`
   text-align: center;
+  padding: 1rem 0.8rem;
   color: var(--meta-color);
 `;
 

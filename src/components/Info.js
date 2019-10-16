@@ -1,66 +1,67 @@
 import React from "react";
-import Container from "./styled/Container";
-import styled from "styled-components";
+import Container from "../components/styled/Container";
 import Video from "./Video";
+import { SectionTitle } from "../components/styled/Typography";
+import styled from "styled-components";
 
 const Info = () => {
   const videoUrl = `https://www.youtube.com/embed/XyPNSkb8Hsg`;
   return (
     <section className="informazioni">
-      <Container>
-        <DoubleGrid className="double-grid">
-          <div className="left">
-            <h4>Pro Loco Nepi</h4>
-            <p>
-              Nepi sorge ai piedi dei monti Cimini e Sabatini su un promontorio
-              tufaceo protetto naturalmente da due profondi canaloni lentamente
-              scavati dal Rio Puzzolo e dal Rio Falisco, affluenti del fiume
-              Treia. Ha origini antichissime. Fondata da Termo Larte 548 anni
-              prima di Roma fece parte della Pentapoli Etrusca e come tale fu
-              popolosa e potente.
-            </p>
-            <p>
-              I Romani vi innalzarono ville e templari; vi costruirono
-              l’anfiteatro detto di Augusto e le importanti Terme dei Gracchi.
-              Distrutta dai Longobardi di Alboino, risorse nel tardo Medioevo e
-              divenne importante sotto il governo di nobili famiglie: i Colonna,
-              gli Orsini, gli Anguillara, lo Stato Pontificio e, dal 1521 in
-              poi, i Borgia.
-            </p>
-            <p>
-              Posti suggestivi e spesso ancora selvaggi, caratterizzano
-              fortemente il paesaggio di questi luoghi.
-            </p>
-          </div>
-          <div className="right">
-            <Video src={videoUrl} />
-          </div>
-        </DoubleGrid>
-      </Container>
+      <InfoContainer>
+        <div className="content left-content">
+          <SectionTitle>Pro Loco Nepi</SectionTitle>
+          <p>
+            Nepi sorge ai piedi dei monti Cimini e Sabatini su un promontorio
+            tufaceo protetto naturalmente da due profondi canaloni lentamente
+            scavati dal Rio Puzzolo e dal Rio Falisco, affluenti del fiume
+            Treia. Ha origini antichissime. Fondata da Termo Larte 548 anni
+            prima di Roma fece parte della Pentapoli Etrusca e come tale fu
+            popolosa e potente.
+          </p>
+          <p>
+            I Romani vi innalzarono ville e templari; vi costruirono
+            l’anfiteatro detto di Augusto e le importanti Terme dei Gracchi.
+            Distrutta dai Longobardi di Alboino, risorse nel tardo Medioevo e
+            divenne importante sotto il governo di nobili famiglie: i Colonna,
+            gli Orsini, gli Anguillara, lo Stato Pontificio e, dal 1521 in poi,
+            i Borgia.
+          </p>
+          <p>
+            Posti suggestivi e spesso ancora selvaggi, caratterizzano fortemente
+            il paesaggio di questi luoghi.
+          </p>
+        </div>
+        <div className="content right-content">
+          <Video src={videoUrl} />
+        </div>
+      </InfoContainer>
     </section>
   );
 };
 
 export default Info;
 
-const DoubleGrid = styled.div`
+const InfoContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 2rem;
 
-  .left {
-    h4 {
-      color: var(--primary-color);
-      text-transform: uppercase;
-    }
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 0.7rem;
+    text-align: justify;
+
     p {
-      text-align: justify;
-      color: var(--paragraph-color);
       margin: 1rem 0;
+      color: var(--paragraph-color);
     }
   }
 
-  .right {
+  .right-content {
     display: flex;
     flex-direction: column;
     justify-content: center;

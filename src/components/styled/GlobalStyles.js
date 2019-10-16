@@ -26,6 +26,9 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 599px) {
       font-size: 15px;
     }
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
   }
   body {
     font-family: "Roboto", sans-serif;

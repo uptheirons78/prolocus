@@ -37,7 +37,6 @@ export default styled.article`
   h6 {
     color: var(--primary-color-lighter);
     font-weight: 400;
-    /* text-transform: uppercase; */
     font-size: 1.3rem;
     line-height: 1.4rem;
     margin-top: 1rem;
