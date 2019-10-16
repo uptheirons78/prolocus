@@ -63,7 +63,6 @@ const ContattiSubTitle = styled(SectionSubTitle)`
 `;
 
 const SectionContatti = styled.section`
-  /* background-color: var(--primary-color); */
   background-image: url(${bgImg});
   background-repeat: no-repeat;
   background-size: cover;

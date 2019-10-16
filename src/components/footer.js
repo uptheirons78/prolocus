@@ -32,8 +32,10 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-  margin: 3vh auto;
-  padding: 0 3rem;
+  background: #000;
+  color: var(--white);
+  margin: 3vh auto 0 auto;
+  padding: 3vh 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
