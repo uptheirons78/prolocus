@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import thumbnailImg from "../images/hero/image-01.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
+import ArticlesContainer from "../components/styled/ArticlesContainer";
+import CardRistorante from "../components/CardRistorante";
 import styled from "styled-components";
 
 const Ristoranti = ({ location }) => {
@@ -16,6 +18,7 @@ const Ristoranti = ({ location }) => {
             nome
             indirizzo
             orario
+            telefono
             descrizione {
               descrizione
             }
@@ -38,35 +41,21 @@ const Ristoranti = ({ location }) => {
         <div className="content">
           <Title>Dove Mangiare</Title>
           <SubTitle>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            natus autem deserunt soluta quos provident.
+            Cucina casereccia, tipica nepesina, romana, regionale e nazionale.
+            Menù di carne e di pesce. Nepi offre un sorprendente ventaglio di
+            scelte gastronomiche, in grado di accontentare qualsiasi palato. Le
+            varietà culinarie offerte ed il numero di ristoranti presenti sul
+            territorio vi permetteranno di degustare ottimi piatti prodotti con
+            eccellenze locali.
           </SubTitle>
         </div>
       </Hero>
       <PageContainer>
-        <ol className="ristoranti">
-          {ristoranti.map(ristorante => {
-            const {
-              id,
-              slug,
-              nome,
-              orario,
-              indirizzo,
-              descrizione,
-            } = ristorante.node;
-            return (
-              <li key={id} className="ristorante">
-                <Link to={`/dove-mangiare/${slug}`}>
-                  <h2>{nome}</h2>
-                </Link>
-                <p>
-                  {indirizzo} <span>{orario}</span>
-                </p>
-                <p>{descrizione.descrizione}</p>
-              </li>
-            );
-          })}
-        </ol>
+        <ArticlesContainer>
+          {ristoranti.map(ristorante => (
+            <CardRistorante key={ristorante.node.id} data={ristorante.node} />
+          ))}
+        </ArticlesContainer>
       </PageContainer>
     </Layout>
   );
