@@ -39,8 +39,12 @@ const Eventi = ({ location }) => {
         <div className="content">
           <Title>Eventi e Manifestazioni</Title>
           <SubTitle>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            natus autem deserunt soluta quos provident.
+            Ogni anno, spesso in collaborazione con altre associazioni locali,
+            organizziamo diversi eventi e manifestazioni sia culturali che
+            enogastronomiche. La Sagra del Salame Cotto e del Pecorino Romano in
+            maggio, le Festività in onore dei Santi Tolomeo e Romano in agosto e
+            la Sagra della Cipolla Nepesina sono soltanto alcune delle
+            manifestazioni che vengono realizzate sul nostro territorio.
           </SubTitle>
         </div>
       </Hero>

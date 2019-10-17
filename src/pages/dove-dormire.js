@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
-import { Link, graphql, useStaticQuery } from "gatsby";
-import thumbnailImg from "../images/hero/image-01.jpg";
+import { graphql, useStaticQuery } from "gatsby";
+import thumbnailImg from "../images/pages/dormire.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
+import ArticlesContainer from "../components/styled/ArticlesContainer";
+import CardAlbergo from "../components/CardAlbergo";
 import styled from "styled-components";
 
 const Alberghi = ({ location }) => {
@@ -15,6 +17,7 @@ const Alberghi = ({ location }) => {
             slug
             nome
             indirizzo
+            telefono
             descrizione {
               descrizione
             }
@@ -37,26 +40,22 @@ const Alberghi = ({ location }) => {
         <div className="content">
           <Title>Dove Dormire</Title>
           <SubTitle>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            natus autem deserunt soluta quos provident.
+            Negli ultimi anni sono nate a Nepi nuove strutture di accoglienza
+            per tutti i tipi di visitatore. L’offerta è ormai ampia ed adeguata.
+            Molte delle strutture sono situate nei pressi del centro
+            storico,quindi ideali come punto di partenza per le visite del
+            nostro borgo. Altre sono immerse nel verde e permettono il massimo
+            del relax e della tranquillità per alcuni giorni lontano dal caos
+            cittadino.
           </SubTitle>
         </div>
       </Hero>
       <PageContainer>
-        <ol className="alberghi">
-          {alberghi.map(albergo => {
-            const { id, slug, nome, indirizzo, descrizione } = albergo.node;
-            return (
-              <li key={id} className="albergo">
-                <Link to={`/dove-dormire/${slug}`}>
-                  <h2>{nome}</h2>
-                </Link>
-                <p>{indirizzo}</p>
-                <p>{descrizione.descrizione}</p>
-              </li>
-            );
-          })}
-        </ol>
+        <ArticlesContainer>
+          {alberghi.map(albergo => (
+            <CardAlbergo key={albergo.node.id} data={albergo.node} />
+          ))}
+        </ArticlesContainer>
       </PageContainer>
     </Layout>
   );

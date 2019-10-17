@@ -77,7 +77,7 @@ const ConvenzioniCard = styled.article`
   }
 
   h6 {
-    color: var(--primary-color);
+    color: var(--primary-color-lighter);
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 1.4rem;

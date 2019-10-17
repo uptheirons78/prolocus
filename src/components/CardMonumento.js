@@ -24,7 +24,7 @@ const CardMonumento = props => {
         <Link to={`/cosa-vedere/${props.data.slug}`}>
           <h6>{props.data.titolo}</h6>
         </Link>
-        <p>
+        <p className="info">
           <strong>Orari:</strong> {props.data.orari}
         </p>
         <p>{excerpt} ...</p>
@@ -55,5 +55,9 @@ const MonumentoCard = styled(ArticleCard)`
 
   .caption {
     text-transform: none !important;
+  }
+
+  .info {
+    font-size: 0.9rem;
   }
 `;
