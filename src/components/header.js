@@ -7,7 +7,7 @@ const Header = ({ siteTitle, toggler }) => {
     { name: "Eventi", path: "/eventi" },
     { name: "Cosa Vedere", path: "/cosa-vedere" },
     { name: "Dove Mangiare", path: "/dove-mangiare" },
-    { name: "Dove Dormire", path: "/dove-mangiare" },
+    { name: "Dove Dormire", path: "/dove-dormire" },
     { name: "Convenzioni", path: "/convenzioni" },
   ];
 

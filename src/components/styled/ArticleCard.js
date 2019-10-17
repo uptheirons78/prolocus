@@ -21,6 +21,7 @@ export default styled.article`
     }
     img {
       width: 100%;
+      height: 200px;
     }
 
     figcaption {

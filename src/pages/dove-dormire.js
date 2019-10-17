@@ -1,23 +1,20 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql, useStaticQuery } from "gatsby";
-import thumbnailImg from "../images/hero/image-03.jpg";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import thumbnailImg from "../images/hero/image-01.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
-import ArticlesContainer from "../components/styled/ArticlesContainer";
-import CardMonumento from "../components/CardMonumento";
 import styled from "styled-components";
 
-const Monumenti = ({ location }) => {
+const Alberghi = ({ location }) => {
   const contentfulData = useStaticQuery(graphql`
     query {
-      allContentfulMonumenti(sort: { fields: titolo, order: ASC }) {
+      allContentfulAlberghi {
         edges {
           node {
             id
             slug
-            titolo
+            nome
             indirizzo
-            orari
             descrizione {
               descrizione
             }
@@ -32,35 +29,40 @@ const Monumenti = ({ location }) => {
     }
   `);
 
-  const monumenti = contentfulData.allContentfulMonumenti.edges;
+  const alberghi = contentfulData.allContentfulAlberghi.edges;
 
   return (
     <Layout location={location}>
       <Hero>
         <div className="content">
-          <Title>Cosa Vedere</Title>
+          <Title>Dove Dormire</Title>
           <SubTitle>
-            La Città di Nepi è uno dei borghi più importanti dal punto di vista
-            storico e turistico della Tuscia. Il patrimonio artistico ed
-            architettonico è ricco e diversi sono i luoghi di interesse che
-            potrete visitare. Il paesaggio circostante fornisce luoghi
-            incantevoli da scoprire e dove poter passare una giornata all'aria
-            aperta.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
+            natus autem deserunt soluta quos provident.
           </SubTitle>
         </div>
       </Hero>
       <PageContainer>
-        <ArticlesContainer>
-          {monumenti.map(monumento => (
-            <CardMonumento key={monumento.node.id} data={monumento.node} />
-          ))}
-        </ArticlesContainer>
+        <ol className="alberghi">
+          {alberghi.map(albergo => {
+            const { id, slug, nome, indirizzo, descrizione } = albergo.node;
+            return (
+              <li key={id} className="albergo">
+                <Link to={`/dove-dormire/${slug}`}>
+                  <h2>{nome}</h2>
+                </Link>
+                <p>{indirizzo}</p>
+                <p>{descrizione.descrizione}</p>
+              </li>
+            );
+          })}
+        </ol>
       </PageContainer>
     </Layout>
   );
 };
 
-export default Monumenti;
+export default Alberghi;
 
 const Hero = styled.section`
   background-image: url(${thumbnailImg});

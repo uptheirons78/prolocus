@@ -19,6 +19,11 @@ const Ristoranti = ({ location }) => {
             descrizione {
               descrizione
             }
+            immagine {
+              fluid {
+                src
+              }
+            }
           }
         }
       }

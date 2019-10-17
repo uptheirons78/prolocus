@@ -11,6 +11,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const ristorantiTemplate = path.resolve(
     "./src/templates/ristorantiTemplate.js"
   );
+  const alberghiTemplate = path.resolve("./src/templates/alberghiTemplate.js");
 
   // Get Data from Contentful
 
@@ -53,6 +54,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
+  /** Data from "Alberghi" */
+  const alberghiResponse = await graphql(`
+    query {
+      allContentfulAlberghi {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `);
+
   /**
    * Managing all responses from Promises to create single pages
    */
@@ -80,6 +94,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
     createPage({
       component: ristorantiTemplate,
       path: `/dove-mangiare/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug,
+      },
+    });
+  });
+
+  alberghiResponse.data.allContentfulAlberghi.edges.forEach(edge => {
+    createPage({
+      component: alberghiTemplate,
+      path: `/dove-dormire/${edge.node.slug}`,
       context: {
         slug: edge.node.slug,
       },
