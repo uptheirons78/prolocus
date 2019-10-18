@@ -16,10 +16,12 @@ const coordinate = [
   },
 ];
 
+const seoDescription = `Nepi è un paese fantastico da vedere sia in estate che in inverno. Potrete ammirare gli incredibili colori della natura che lo circonda, le mura farnesiane, la Rocca dei Borgia o la bellezza della Cattedrale di Santa Maria Assunta. Durante il vostro soggiorno potrete gustare fantastici prodotti locali o prendere parte agli eventi culturali che si tengono durante tutto l'anno.`;
+
 const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
-      <SEO title="Home" />
+      <SEO title="Home" description={seoDescription} />
       <HeroSlider />
       <Info />
       <Eventi />

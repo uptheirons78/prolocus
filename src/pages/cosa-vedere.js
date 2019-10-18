@@ -5,6 +5,7 @@ import thumbnailImg from "../images/hero/monumenti-template.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardMonumento from "../components/CardMonumento";
+import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Monumenti = ({ location }) => {
@@ -34,19 +35,20 @@ const Monumenti = ({ location }) => {
 
   const monumenti = contentfulData.allContentfulMonumenti.edges;
 
-  return (
-    <Layout location={location}>
-      <Hero>
-        <div className="content">
-          <Title>Cosa Vedere</Title>
-          <SubTitle>
-            La Città di Nepi è uno dei borghi più importanti dal punto di vista
+  const subtitle = `La Città di Nepi è uno dei borghi più importanti dal punto di vista
             storico e turistico della Tuscia. Il patrimonio artistico ed
             architettonico è ricco e diversi sono i luoghi di interesse che
             potrete visitare. Il paesaggio circostante fornisce luoghi
             incantevoli da scoprire e dove poter passare una giornata all'aria
-            aperta.
-          </SubTitle>
+            aperta.`;
+
+  return (
+    <Layout location={location}>
+      <SEO title="Cosa Vedere a Nepi" description={subtitle} />
+      <Hero>
+        <div className="content">
+          <Title>Cosa Vedere</Title>
+          <SubTitle>{subtitle}</SubTitle>
         </div>
       </Hero>
       <PageContainer>

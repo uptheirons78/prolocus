@@ -5,6 +5,7 @@ import thumbnailImg from "../images/hero/dove-dormire.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardAlbergo from "../components/CardAlbergo";
+import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Alberghi = ({ location }) => {
@@ -34,20 +35,21 @@ const Alberghi = ({ location }) => {
 
   const alberghi = contentfulData.allContentfulAlberghi.edges;
 
-  return (
-    <Layout location={location}>
-      <Hero>
-        <div className="content">
-          <Title>Dove Dormire</Title>
-          <SubTitle>
-            Negli ultimi anni sono nate a Nepi nuove strutture di accoglienza
+  const subtitle = `Negli ultimi anni sono nate a Nepi nuove strutture di accoglienza
             per tutti i tipi di visitatore. L’offerta è ormai ampia ed adeguata.
             Molte delle strutture sono situate nei pressi del centro
             storico,quindi ideali come punto di partenza per le visite del
             nostro borgo. Altre sono immerse nel verde e permettono il massimo
             del relax e della tranquillità per alcuni giorni lontano dal caos
-            cittadino.
-          </SubTitle>
+            cittadino.`;
+
+  return (
+    <Layout location={location}>
+      <SEO title="Dove Dormire a Nepi" description={subtitle} />
+      <Hero>
+        <div className="content">
+          <Title>Dove Dormire</Title>
+          <SubTitle>{subtitle}</SubTitle>
         </div>
       </Hero>
       <PageContainer>

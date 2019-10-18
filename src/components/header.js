@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Header = ({ siteTitle, toggler }) => {
   const pages = [
+    { name: "Home", path: "/" },
     { name: "Eventi", path: "/eventi" },
     { name: "Cosa Vedere", path: "/cosa-vedere" },
     { name: "Dove Mangiare", path: "/dove-mangiare" },
@@ -115,18 +116,22 @@ const StyledHeader = styled.header`
       display: inline-block;
       padding: 0px 1rem;
 
+      @media screen and (max-width: 1100px) {
+        padding: 0px 0.4rem;
+      }
+
       @media screen and (max-width: 900px) {
         display: block;
         text-align: center;
         margin: 1rem;
       }
 
-      @media screen and (max-width: 1000px) {
-        padding: 0px 0.6rem;
-      }
-
       a {
         transition: all 0.3s ease 0s;
+
+        @media screen and (max-width: 1100px) {
+          font-size: 0.9rem;
+        }
 
         @media screen and (max-width: 900px) {
           font-size: 1.2rem;

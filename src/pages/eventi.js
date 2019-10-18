@@ -5,6 +5,7 @@ import eventiImg from "../images/pages/eventi.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardEvento from "../components/CardEvento";
+import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Eventi = ({ location }) => {
@@ -33,19 +34,20 @@ const Eventi = ({ location }) => {
 
   const eventi = contentfulData.allContentfulEventi.edges;
 
-  return (
-    <Layout location={location}>
-      <Hero>
-        <div className="content">
-          <Title>Eventi e Manifestazioni</Title>
-          <SubTitle>
-            Ogni anno, spesso in collaborazione con altre associazioni locali,
+  const subtitle = `Ogni anno, spesso in collaborazione con altre associazioni locali,
             organizziamo diversi eventi e manifestazioni sia culturali che
             enogastronomiche. La Sagra del Salame Cotto e del Pecorino Romano in
             maggio, le Festività in onore dei Santi Tolomeo e Romano in agosto e
             la Sagra della Cipolla Nepesina sono soltanto alcune delle
-            manifestazioni che vengono realizzate sul nostro territorio.
-          </SubTitle>
+            manifestazioni che vengono realizzate sul nostro territorio.`;
+
+  return (
+    <Layout location={location}>
+      <SEO title="Eventi e Manifestazioni a Nepi" description={subtitle} />
+      <Hero>
+        <div className="content">
+          <Title>Eventi e Manifestazioni</Title>
+          <SubTitle>{subtitle}</SubTitle>
         </div>
       </Hero>
       <PageContainer>

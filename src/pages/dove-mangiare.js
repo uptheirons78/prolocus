@@ -5,6 +5,7 @@ import thumbnailImg from "../images/hero/dove-mangiare.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardRistorante from "../components/CardRistorante";
+import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Ristoranti = ({ location }) => {
@@ -35,19 +36,20 @@ const Ristoranti = ({ location }) => {
 
   const ristoranti = contentfulData.allContentfulRistoranti.edges;
 
-  return (
-    <Layout location={location}>
-      <Hero>
-        <div className="content">
-          <Title>Dove Mangiare</Title>
-          <SubTitle>
-            Cucina casereccia, tipica nepesina, romana, regionale e nazionale.
+  const subtitle = `Cucina casereccia, tipica nepesina, romana, regionale e nazionale.
             Menù di carne e di pesce. Nepi offre un sorprendente ventaglio di
             scelte gastronomiche, in grado di accontentare qualsiasi palato. Le
             varietà culinarie offerte ed il numero di ristoranti presenti sul
             territorio vi permetteranno di degustare ottimi piatti prodotti con
-            eccellenze locali.
-          </SubTitle>
+            eccellenze locali.`;
+
+  return (
+    <Layout location={location}>
+      <SEO title="Dove Mangiare a Nepi" description={subtitle} />
+      <Hero>
+        <div className="content">
+          <Title>Dove Mangiare</Title>
+          <SubTitle>{subtitle}</SubTitle>
         </div>
       </Hero>
       <PageContainer>

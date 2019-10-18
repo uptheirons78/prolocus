@@ -4,8 +4,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import convenzioniImg from "../images/pages/convenzioni.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import CardConvenzioni from "../components/CardConvenzioni";
-import styled from "styled-components";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
+import SEO from "../components/seo";
+import styled from "styled-components";
 
 const Convenzioni = ({ location }) => {
   const contentfulData = useStaticQuery(graphql`
@@ -35,19 +36,20 @@ const Convenzioni = ({ location }) => {
 
   const convenzioni = contentfulData.allContentfulConvenzioni.edges;
 
-  return (
-    <Layout location={location}>
-      <Hero>
-        <div className="content">
-          <Title>Convenzioni per i nostri soci</Title>
-          <SubTitle>
-            La Pro Loco di Nepi si e’ prefissata il compito di rendere visibili
+  const subtitle = `La Pro Loco di Nepi si e’ prefissata il compito di rendere visibili
             le realtà commerciali e le eccellenze locali per cercare sempre di
             più di interagire gli uni con altri per il bene comune. Abbiamo
             chiesto a negozi ed esercizi commerciali di effettuare delle
             convenzioni per i nostri Tesserati e siamo felici di elencarli e di
-            sapere che altri si stanno organizzando in merito.
-          </SubTitle>
+            sapere che altri si stanno organizzando in merito.`;
+
+  return (
+    <Layout location={location}>
+      <SEO title="Convenzioni" description={subtitle} />
+      <Hero>
+        <div className="content">
+          <Title>Convenzioni per i nostri soci</Title>
+          <SubTitle>{subtitle}</SubTitle>
         </div>
       </Hero>
       <PageContainer>
