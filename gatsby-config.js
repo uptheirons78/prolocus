@@ -34,6 +34,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

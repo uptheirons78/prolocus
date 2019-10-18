@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
-import thumbnailImg from "../images/hero/image-03.jpg";
+import thumbnailImg from "../images/hero/monumenti-template.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardMonumento from "../components/CardMonumento";
@@ -75,7 +75,7 @@ const Hero = styled.section`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
     display: flex;
