@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
-import thumbnailImg from "../images/pages/dormire.jpg";
+import thumbnailImg from "../images/hero/dove-dormire.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardAlbergo from "../components/CardAlbergo";

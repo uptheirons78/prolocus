@@ -7,7 +7,7 @@ import bgImg from "../images/bg-contatti.jpg";
 
 const Contatti = () => {
   return (
-    <SectionContatti>
+    <SectionContatti id="#contact-us">
       <Container>
         <ContattiTitle>Come Contattarci</ContattiTitle>
         <ContattiSubTitle>

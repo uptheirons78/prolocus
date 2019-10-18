@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { SectionTitle, SectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
 import styled from "styled-components";
-import image from "../images/fake-image.jpg";
 import { items } from "../data/data";
 
 const Mosaic = () => {
@@ -52,7 +51,6 @@ const SectionDiscoverUs = styled.section`
     grid-template-rows: repeat(2, 15rem);
     grid-gap: 0.5rem;
 
-
     @media screen and (max-width: 820px) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 15rem);
@@ -63,7 +61,6 @@ const SectionDiscoverUs = styled.section`
     }
 
     .grid-item {
-      /* background-image: url(${image}); */
       background-size: cover;
       background-position: center;
       position: relative;
