@@ -4,6 +4,7 @@ import GlobalStyle from "./styled/GlobalStyles";
 import styled from "styled-components";
 
 import Header from "./header";
+import FooterMenu from "./FooterMenu";
 import Footer from "./footer";
 
 const Layout = ({ children }) => {
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
+      <FooterMenu />
       <Footer />
       <MobileToggler onClick={() => setTogglerState(!togglerState)}>
         {togglerContent}
