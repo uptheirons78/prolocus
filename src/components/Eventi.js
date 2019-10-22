@@ -5,6 +5,8 @@ import { SectionTitle, SectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
 import ArticlesContainer from "./styled/ArticlesContainer";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "react-visibility-sensor";
 import styled from "styled-components";
 
 const Eventi = () => {
@@ -35,27 +37,39 @@ const Eventi = () => {
 
   return (
     <SectionEventi className="eventi">
-      <Container className="container">
-        <SectionTitle>Eventi</SectionTitle>
-        <SectionSubTitle>
-          Le Festività Patronali in onore dei S.S. Romano e Tolomeo, la Sagra
-          del Pecorino Romano e del Salame Cotto, il Natale dei Bambini e la
-          Sagra della Cipolla Nepesina sono soltanto alcuni esempi delle diverse
-          manifestazioni culturali ed enogastronomiche che vengono organizzate
-          annualmente sul nostro territorio.
-        </SectionSubTitle>
-        <ArticlesContainer>
-          {eventi.map(evento => (
-            <CardEvento key={evento.node.id} data={evento.node} />
-          ))}
-        </ArticlesContainer>
-        <Link className="more" to="/eventi">
-          <span>Vedi tutti i prossimi eventi </span>
-          <span>
-            <FaLongArrowAltRight />
-          </span>
-        </Link>
-      </Container>
+      <VisibilitySensor partialVisibility>
+        {({ isVisible }) => (
+          <Spring
+            config={{ delay: 350, duration: 2500 }}
+            to={{ opacity: isVisible ? 1 : 0 }}
+          >
+            {({ opacity }) => (
+              <Container className="container" style={{ opacity }}>
+                <SectionTitle>Eventi</SectionTitle>
+                <SectionSubTitle>
+                  Le Festività Patronali in onore dei S.S. Romano e Tolomeo, la
+                  Sagra del Pecorino Romano e del Salame Cotto, il Natale dei
+                  Bambini e la Sagra della Cipolla Nepesina sono soltanto alcuni
+                  esempi delle diverse manifestazioni culturali ed
+                  enogastronomiche che vengono organizzate annualmente sul
+                  nostro territorio.
+                </SectionSubTitle>
+                <ArticlesContainer>
+                  {eventi.map(evento => (
+                    <CardEvento key={evento.node.id} data={evento.node} />
+                  ))}
+                </ArticlesContainer>
+                <Link className="more" to="/eventi">
+                  <span>Vedi tutti i prossimi eventi </span>
+                  <span>
+                    <FaLongArrowAltRight />
+                  </span>
+                </Link>
+              </Container>
+            )}
+          </Spring>
+        )}
+      </VisibilitySensor>
     </SectionEventi>
   );
 };

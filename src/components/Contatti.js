@@ -1,54 +1,67 @@
 import React from "react";
 import Container from "./styled/Container";
 import { SectionSubTitle, SectionTitle } from "./styled/Typography";
-import styled from "styled-components";
 import { FiPhoneCall, FiClock, FiMap } from "react-icons/fi";
 import bgImg from "../images/bg-contatti.jpg";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "react-visibility-sensor";
+import styled from "styled-components";
 
 const Contatti = () => {
   return (
     <SectionContatti id="#contact-us">
-      <Container>
-        <ContattiTitle>Come Contattarci</ContattiTitle>
-        <ContattiSubTitle>
-          Gli uffici della Proloco Nepi sono aperti tutti i giorni. Per
-          contattarci potete chiamarci telefonicamente o semplicemente inviare
-          una email. Faremo in modo di metterci in contatto e soddisfare le
-          vostre richieste.
-        </ContattiSubTitle>
-        <div className="contacts-container">
-          <div className="contact-card">
-            <h4>
-              Indirizzo{" "}
-              <span>
-                <FiMap />
-              </span>
-            </h4>
-            <p>Via Giacomo Matteotti n. 32</p>
-            <p>01036 Nepi VT</p>
-          </div>
-          <div className="contact-card">
-            <h4>
-              Orario{" "}
-              <span>
-                <FiClock />
-              </span>
-            </h4>
-            <p>Lunedì - Sabato: 17:00 - 19:00</p>
-            <p>Domenica: 10:30 - 12:30</p>
-          </div>
-          <div className="contact-card">
-            <h4>
-              Contatti{" "}
-              <span>
-                <FiPhoneCall />
-              </span>
-            </h4>
-            <p>+39 0761 1707105</p>
-            <p>proloco_nepi@virgilio.it</p>
-          </div>
-        </div>
-      </Container>
+      <VisibilitySensor partialVisibility>
+        {({ isVisible }) => (
+          <Spring
+            config={{ delay: 350, duration: 2500 }}
+            to={{ opacity: isVisible ? 1 : 0 }}
+          >
+            {({ opacity }) => (
+              <Container style={{ opacity }}>
+                <ContattiTitle>Come Contattarci</ContattiTitle>
+                <ContattiSubTitle>
+                  Gli uffici della Proloco Nepi sono aperti tutti i giorni. Per
+                  contattarci potete chiamarci telefonicamente o semplicemente
+                  inviare una email. Faremo in modo di metterci in contatto e
+                  soddisfare le vostre richieste.
+                </ContattiSubTitle>
+                <div className="contacts-container">
+                  <div className="contact-card">
+                    <h4>
+                      Indirizzo{" "}
+                      <span>
+                        <FiMap />
+                      </span>
+                    </h4>
+                    <p>Via Giacomo Matteotti n. 32</p>
+                    <p>01036 Nepi VT</p>
+                  </div>
+                  <div className="contact-card">
+                    <h4>
+                      Orario{" "}
+                      <span>
+                        <FiClock />
+                      </span>
+                    </h4>
+                    <p>Lunedì - Sabato: 17:00 - 19:00</p>
+                    <p>Domenica: 10:30 - 12:30</p>
+                  </div>
+                  <div className="contact-card">
+                    <h4>
+                      Contatti{" "}
+                      <span>
+                        <FiPhoneCall />
+                      </span>
+                    </h4>
+                    <p>+39 0761 1707105</p>
+                    <p>proloco_nepi@virgilio.it</p>
+                  </div>
+                </div>
+              </Container>
+            )}
+          </Spring>
+        )}
+      </VisibilitySensor>
     </SectionContatti>
   );
 };

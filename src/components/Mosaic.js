@@ -2,39 +2,53 @@ import React from "react";
 import { Link } from "gatsby";
 import { SectionTitle, SectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "react-visibility-sensor";
 import styled from "styled-components";
 import { items } from "../data/data";
 
 const Mosaic = () => {
   return (
     <SectionDiscoverUs>
-      <Container>
-        <SectionTitle>Vieni a trovarci</SectionTitle>
-        <SectionSubTitle>
-          Nepi è un paese fantastico da vedere sia in estate che in inverno.
-          Potrete ammirare gli incredibili colori della natura che lo circonda,
-          le mura farnesiane, la Rocca dei Borgia o la bellezza della Cattedrale
-          di Santa Maria Assunta. Durante il vostro soggiorno potrete gustare
-          fantastici prodotti locali o prendere parte agli eventi culturali che
-          si tengono durante tutto l'anno.
-        </SectionSubTitle>
-        <div className="grid-container">
-          {items.map(item => (
-            <div
-              key={item.title}
-              className="grid-item"
-              style={{ backgroundImage: `url(${item.img})` }}
-            >
-              <Link to={item.url}>
-                <div className="content">
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
+      <VisibilitySensor partialVisibility>
+        {({ isVisible }) => (
+          <Spring
+            config={{ delay: 350, duration: 2500 }}
+            to={{ opacity: isVisible ? 1 : 0 }}
+          >
+            {({ opacity }) => (
+              <Container style={{ opacity }}>
+                <SectionTitle>Vieni a trovarci</SectionTitle>
+                <SectionSubTitle>
+                  Nepi è un paese fantastico da vedere sia in estate che in
+                  inverno. Potrete ammirare gli incredibili colori della natura
+                  che lo circonda, le mura farnesiane, la Rocca dei Borgia o la
+                  bellezza della Cattedrale di Santa Maria Assunta. Durante il
+                  vostro soggiorno potrete gustare fantastici prodotti locali o
+                  prendere parte agli eventi culturali che si tengono durante
+                  tutto l'anno.
+                </SectionSubTitle>
+                <div className="grid-container">
+                  {items.map(item => (
+                    <div
+                      key={item.title}
+                      className="grid-item"
+                      style={{ backgroundImage: `url(${item.img})` }}
+                    >
+                      <Link to={item.url}>
+                        <div className="content">
+                          <h4>{item.title}</h4>
+                          <p>{item.text}</p>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Container>
+              </Container>
+            )}
+          </Spring>
+        )}
+      </VisibilitySensor>
     </SectionDiscoverUs>
   );
 };

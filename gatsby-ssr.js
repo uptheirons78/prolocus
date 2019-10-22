@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+// gatsby-ssr.js
+import React from "react";
 
-// You can delete this file if you're not using it
+export const onRenderBody = ({ setPreBodyComponents, setBodyAttributes }) => {
+  setBodyAttributes({ className: "no-js" });
+  setPreBodyComponents([
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `document.querySelector('body').classList.remove('no-js')`,
+      }}
+    />,
+  ]);
+};

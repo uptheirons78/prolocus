@@ -65,6 +65,19 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
 
   }
+
+  body.no-js .fadeIn {
+    opacity: 1;
+  }
+  body.no-js .slideLeft {
+    opacity: 1;
+    transform: none;
+  }
+  body.no-js .slideUp {
+    opacity: 1;
+    transform: none;
+  }
+
 `;
 
 export default GlobalStyle;
