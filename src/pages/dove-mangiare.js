@@ -6,6 +6,8 @@ import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardRistorante from "../components/CardRistorante";
 import SEO from "../components/seo";
+import Fade from "../components/Fade";
+import SlideIn from "../components/SlideIn";
 import styled from "styled-components";
 
 const Ristoranti = ({ location }) => {
@@ -48,17 +50,21 @@ const Ristoranti = ({ location }) => {
       <SEO title="Dove Mangiare a Nepi" description={subtitle} />
       <Hero>
         <div className="content">
-          <Title>Dove Mangiare</Title>
-          <SubTitle>{subtitle}</SubTitle>
+          <Fade>
+            <Title>Dove Mangiare</Title>
+            <SubTitle>{subtitle}</SubTitle>
+          </Fade>
         </div>
       </Hero>
-      <PageContainer>
-        <ArticlesContainer>
-          {ristoranti.map(ristorante => (
-            <CardRistorante key={ristorante.node.id} data={ristorante.node} />
-          ))}
-        </ArticlesContainer>
-      </PageContainer>
+      <SlideIn>
+        <PageContainer>
+          <ArticlesContainer>
+            {ristoranti.map(ristorante => (
+              <CardRistorante key={ristorante.node.id} data={ristorante.node} />
+            ))}
+          </ArticlesContainer>
+        </PageContainer>
+      </SlideIn>
     </Layout>
   );
 };

@@ -6,6 +6,8 @@ import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import CardConvenzioni from "../components/CardConvenzioni";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import SEO from "../components/seo";
+import Fade from "../components/Fade";
+import SlideIn from "../components/SlideIn";
 import styled from "styled-components";
 
 const Convenzioni = ({ location }) => {
@@ -48,22 +50,26 @@ const Convenzioni = ({ location }) => {
       <SEO title="Convenzioni" description={subtitle} />
       <Hero>
         <div className="content">
-          <Title>Convenzioni per i nostri soci</Title>
-          <SubTitle>{subtitle}</SubTitle>
+          <Fade>
+            <Title>Convenzioni per i nostri soci</Title>
+            <SubTitle>{subtitle}</SubTitle>
+          </Fade>
         </div>
       </Hero>
-      <PageContainer>
-        <ArticlesContainer>
-          {convenzioni
-            .sort(() => Math.random() - 0.5)
-            .map(convenzione => (
-              <CardConvenzioni
-                key={convenzione.node.id}
-                data={convenzione.node}
-              />
-            ))}
-        </ArticlesContainer>
-      </PageContainer>
+      <SlideIn>
+        <PageContainer>
+          <ArticlesContainer>
+            {convenzioni
+              .sort(() => Math.random() - 0.5)
+              .map(convenzione => (
+                <CardConvenzioni
+                  key={convenzione.node.id}
+                  data={convenzione.node}
+                />
+              ))}
+          </ArticlesContainer>
+        </PageContainer>
+      </SlideIn>
     </Layout>
   );
 };

@@ -6,6 +6,8 @@ import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import ArticlesContainer from "../components/styled/ArticlesContainer";
 import CardEvento from "../components/CardEvento";
 import SEO from "../components/seo";
+import Fade from "../components/Fade";
+import SlideIn from "../components/SlideIn";
 import styled from "styled-components";
 
 const Eventi = ({ location }) => {
@@ -42,21 +44,25 @@ const Eventi = ({ location }) => {
             manifestazioni che vengono realizzate sul nostro territorio.`;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} style={{ overflow: "hidden" }}>
       <SEO title="Eventi e Manifestazioni a Nepi" description={subtitle} />
       <Hero>
         <div className="content">
-          <Title>Eventi e Manifestazioni</Title>
-          <SubTitle>{subtitle}</SubTitle>
+          <Fade>
+            <Title>Eventi e Manifestazioni</Title>
+            <SubTitle>{subtitle}</SubTitle>
+          </Fade>
         </div>
       </Hero>
-      <PageContainer>
-        <ArticlesContainer>
-          {eventi.map(evento => (
-            <CardEvento key={evento.node.id} data={evento.node} />
-          ))}
-        </ArticlesContainer>
-      </PageContainer>
+      <SlideIn>
+        <PageContainer>
+          <ArticlesContainer>
+            {eventi.map(evento => (
+              <CardEvento key={evento.node.id} data={evento.node} />
+            ))}
+          </ArticlesContainer>
+        </PageContainer>
+      </SlideIn>
     </Layout>
   );
 };
