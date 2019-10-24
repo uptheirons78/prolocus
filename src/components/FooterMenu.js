@@ -44,13 +44,16 @@ const FooterMenu = () => {
                 <Link to="#">Chi Siamo</Link>
               </li>
               <li>
+                <Link to="/contatti">Contatti</Link>
+              </li>
+              <li>
+                <Link to="/convenzioni">Convenzioni</Link>
+              </li>
+              <li>
                 <Link to="#">Privacy Policy</Link>
               </li>
               <li>
                 <Link to="#">Cookies Policy</Link>
-              </li>
-              <li>
-                <Link to="convenzioni">Convenzioni</Link>
               </li>
             </ul>
           </nav>

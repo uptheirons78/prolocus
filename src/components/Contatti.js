@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 const Contatti = () => {
   return (
-    <SectionContatti id="#contact-us">
+    <SectionContatti id="contact">
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
           <Spring

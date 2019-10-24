@@ -28,9 +28,9 @@ const Header = ({ siteTitle, toggler }) => {
           ))}
         </ul>
       </nav>
-      <a className="cta" href="/">
+      <Link className="cta" to="/contatti">
         <button>Contatti</button>
-      </a>
+      </Link>
     </StyledHeader>
   );
 };
