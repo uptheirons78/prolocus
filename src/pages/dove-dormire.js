@@ -59,9 +59,11 @@ const Alberghi = ({ location }) => {
       <SlideIn>
         <PageContainer>
           <ArticlesContainer>
-            {alberghi.map(albergo => (
-              <CardAlbergo key={albergo.node.id} data={albergo.node} />
-            ))}
+            {alberghi
+              .sort(() => Math.random() - 0.5)
+              .map(albergo => (
+                <CardAlbergo key={albergo.node.id} data={albergo.node} />
+              ))}
           </ArticlesContainer>
         </PageContainer>
       </SlideIn>

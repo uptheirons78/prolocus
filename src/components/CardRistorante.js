@@ -37,7 +37,7 @@ const CardRistorante = props => {
         </p>
         <p>{excerpt} ...</p>
       </div>
-      <Link className="read-more" to={`/cosa-vedere/${props.data.slug}`}>
+      <Link className="read-more" to={`/dove-mangiare/${props.data.slug}`}>
         <span>Leggi tutto </span>
         <span>
           <FaLongArrowAltRight />
