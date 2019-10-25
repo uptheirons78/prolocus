@@ -1,9 +1,9 @@
-import cosaVedereImg from "../images/cosa-vedere.jpg";
+import cosaVedereImg from "../images/nepi/nepi-cavatera-02.jpg";
 import doveDormireImg from "../images/dove-dormire.jpg";
 import doveMangiareImg from "../images/dove-mangiare.jpg";
-import eccellenzeImg from "../images/eccellenze.jpg";
-import eventiImg from "../images/eventi.jpg";
-import convenzioniImg from "../images/convenzioni.jpg";
+import eccellenzeImg from "../images/nepi/eccellenze-locali.jpg";
+import eventiImg from "../images/nepi/nepi-palio-dei-borgia.jpg";
+import convenzioniImg from "../images/nepi/nepi-fontana-piazza.jpg";
 
 const items = [
   {
@@ -50,4 +50,59 @@ const items = [
   },
 ];
 
-export { items };
+const organigramma = [
+  {
+    titolo: "Presidente",
+    nome: "Fabio Pifferi",
+  },
+  {
+    titolo: "Vice Presidente",
+    nome: "Massimo Palazzini",
+  },
+  {
+    titolo: "Segretario",
+    nome: "Claudio de Giorgi",
+  },
+  {
+    titolo: "Tesoriere",
+    nome: "Annarosa Fabrizi",
+  },
+  {
+    titolo: "Responsabile Magazzino",
+    nome: "Luigi Albertini",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Mario Turbesi",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Maurizio Fagioli",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Aurelio Neri",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Antonio Tronca",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Francesco Marini",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Esmeralda Lucentini",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Mara Pomi",
+  },
+  {
+    titolo: "Consigliere",
+    nome: "Roberta Barboni",
+  },
+];
+
+export { items, organigramma };

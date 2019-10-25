@@ -41,7 +41,7 @@ const FooterMenu = () => {
           <nav>
             <ul>
               <li>
-                <Link to="#">Chi Siamo</Link>
+                <Link to="/chi-siamo">Chi Siamo</Link>
               </li>
               <li>
                 <Link to="/contatti">Contatti</Link>

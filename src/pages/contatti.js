@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import convenzioniImg from "../images/pages/convenzioni.jpg";
+import contattiImg from "../images/nepi/nepi-fontana-piazza.jpg";
 import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
 import MappaSede from "../components/MappaSede";
 import SEO from "../components/seo";
@@ -71,7 +71,7 @@ const Contatti = ({ location }) => {
 export default Contatti;
 
 const Hero = styled.section`
-  background-image: url(${convenzioniImg});
+  background-image: url(${contattiImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

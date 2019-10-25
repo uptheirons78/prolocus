@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import image01 from "../images/hero/image-01.jpg";
-import image02 from "../images/hero/image-02.jpg";
-import image03 from "../images/hero/image-03.jpg";
+import image01 from "../images/nepi/nepi-cavatera-03.jpg";
+import image02 from "../images/nepi/nepi-fontana-piazza.jpg";
+import image03 from "../images/nepi/nepi-cavatera.jpg";
 import logo from "../images/website-icon.png";
 
 const HeroSlider = () => {
