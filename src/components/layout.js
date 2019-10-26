@@ -11,10 +11,14 @@ const theme = {
   green: "#28a745",
   darkGreen: "#096432",
   black: "#393939",
+  lightBlack: "#5a5a5a",
   meta: "#a7a7a7",
   white: "#edf0f1",
   maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  bsl:
+    "0px 70px 40px -50px rgba(0, 0, 0, 0.4), 0px 3px 20px 8px rgba(0, 0, 0, 0.2)",
+  bsh:
+    "0px 70px 40px -50px rgba(0, 0, 0, 0.6), 0px 3px 20px 8px rgba(0, 0, 0, 0.3)",
 };
 
 const Layout = ({ children }) => {
@@ -54,7 +58,7 @@ export default Layout;
 
 const MobileToggler = styled.button`
   padding: 9px 25px;
-  color: #edf0f1;
+  color: ${props => props.theme.white};
   text-decoration: none;
   background-color: var(--loco-green);
   border: none;
@@ -70,7 +74,7 @@ const MobileToggler = styled.button`
   z-index: 1000;
 
   &:hover {
-    background-color: var(--pro-green);
+    background-color: ${props => props.theme.darkGreen};
   }
 
   &:focus {

@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components";
+import radnikanextFont from "../../static/radnikanext-medium-webfont.woff2";
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'radnika_next';
+    src: url(${radnikanextFont}) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   :root {
   --primary-color: #096432;
   --primary-color-lighter: #28a745;
