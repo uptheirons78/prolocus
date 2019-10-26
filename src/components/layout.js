@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import GlobalStyle from "./styled/GlobalStyles";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import Header from "./header";
 import FooterMenu from "./FooterMenu";
 import Footer from "./footer";
+
+const theme = {
+  green: "#28a745",
+  darkGreen: "#096432",
+  black: "#393939",
+  meta: "#a7a7a7",
+  white: "#edf0f1",
+  maxWidth: "1000px",
+  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+};
 
 const Layout = ({ children }) => {
   const [togglerState, setTogglerState] = useState(false);
@@ -25,15 +35,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header toggler={toggler} siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
-      <FooterMenu />
-      <Footer />
-      <MobileToggler onClick={() => setTogglerState(!togglerState)}>
-        {togglerContent}
-      </MobileToggler>
+      <ThemeProvider theme={theme}>
+        <Header toggler={toggler} siteTitle={data.site.siteMetadata.title} />
+        <div>
+          <main>{children}</main>
+        </div>
+        <FooterMenu />
+        <Footer />
+        <MobileToggler onClick={() => setTogglerState(!togglerState)}>
+          {togglerContent}
+        </MobileToggler>
+      </ThemeProvider>
     </>
   );
 };

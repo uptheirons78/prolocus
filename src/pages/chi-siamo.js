@@ -82,7 +82,8 @@ const Hero = styled.section`
 `;
 
 const Title = styled(SectionTitle)`
-  color: var(--primary-color-lighter);
+  /* color: var(--primary-color-lighter); */
+  color: ${props => props.theme.green};
   @media screen and (max-width: 600px) {
     font-size: 2rem;
   }
