@@ -13,7 +13,7 @@ const handleSizeType = size => {
 
 export default styled.a`
   color: #fff;
-  background: var(--primary-color);
+  background: ${props => props.theme.darkGreen};
   padding: ${({ size }) => handleSizeType(size)};
   border-radius: 5px;
   font-family: "Roboto", sans-serif;

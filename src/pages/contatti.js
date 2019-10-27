@@ -101,7 +101,7 @@ const Contattaci = styled.section`
 
     .contattaci-title {
       font-size: 2rem;
-      color: var(--primary-color-lighter);
+      color: ${props => props.theme.green};
       text-transform: uppercase;
 
       svg {
@@ -118,8 +118,7 @@ const Contattaci = styled.section`
 `;
 
 const ContenitoreMappa = styled.section`
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: ${props => props.theme.bsl};
   padding: 2rem 0;
   transition: all 0.35s ease;
   overflow: hidden;
@@ -131,7 +130,7 @@ const ContenitoreMappa = styled.section`
 
   h6 {
     font-size: 2rem;
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     text-transform: uppercase;
     text-align: center;
 

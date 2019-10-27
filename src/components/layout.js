@@ -62,7 +62,7 @@ const MobileToggler = styled.button`
   padding: 9px 25px;
   color: ${props => props.theme.white};
   text-decoration: none;
-  background-color: var(--loco-green);
+  background-color: ${props => props.theme.green};
   border: none;
   border-radius: 50px;
   cursor: pointer;

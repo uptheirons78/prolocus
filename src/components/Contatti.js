@@ -71,7 +71,7 @@ const Contatti = () => {
 export default Contatti;
 
 const ContattiTitle = styled(SectionTitle)`
-  color: var(--primary-color-lighter);
+  color: ${props => props.theme.green};
 `;
 const ContattiSubTitle = styled(SectionSubTitle)`
   color: #fff;

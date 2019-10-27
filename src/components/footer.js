@@ -21,7 +21,7 @@ export default Footer;
 
 const FooterContainer = styled.footer`
   background: #333;
-  color: var(--white);
+  color: ${props => props.theme.white};
   margin: 0 auto;
   padding: 3vh 3rem;
   display: flex;

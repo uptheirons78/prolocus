@@ -94,7 +94,7 @@ const MainContainer = styled.section`
       }
 
       p {
-        color: var(--white);
+        color: ${props => props.theme.white};
       }
 
       h4 {
