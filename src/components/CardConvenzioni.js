@@ -38,8 +38,7 @@ export default CardEvento;
 const ConvenzioniCard = styled.article`
   margin-top: 2vh;
   padding: 0.7rem;
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: ${props => props.theme.bsl};
   transition: all 0.35s ease;
 
   display: flex;
@@ -47,8 +46,7 @@ const ConvenzioniCard = styled.article`
 
   &:hover {
     transform: translateY(-2%);
-    box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.6),
-      0px 3px 20px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: ${props => props.theme.bsh};
   }
 
   .convenzioni-content {
@@ -69,15 +67,14 @@ const ConvenzioniCard = styled.article`
       position: absolute;
       top: 0;
       right: 0;
-      background: var(--primary-color-lighter);
-      color: #fff;
+      background: ${props => props.theme.green};
+      color: #ffffff;
       padding: 0.5rem;
-      /* text-transform: capitalize; */
     }
   }
 
   h6 {
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 1.4rem;
@@ -90,14 +87,14 @@ const ConvenzioniCard = styled.article`
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: var(--primary-color-lighter);
-    color: var(--white);
+    background: ${props => props.theme.green};
+    color: ${props => props.theme.white};
     display: inline-block;
     padding: 0.1rem 0.3rem;
     margin-top: 0;
   }
   p {
-    color: var(--paragraph-color);
+    color: ${props => props.theme.lightBlack};
     font-size: 0.9rem;
     text-align: justify;
     margin-top: 1rem;
@@ -107,7 +104,7 @@ const ConvenzioniCard = styled.article`
   .read-more {
     display: inline-block;
     margin-top: 1rem;
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     font-weight: 400;
 
     svg {

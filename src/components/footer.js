@@ -29,19 +29,19 @@ const FooterContainer = styled.footer`
   justify-content: center;
 
   .footer-brand {
-    border-top: 1px solid var(--meta-color);
+    border-top: 1px solid ${props => props.theme.meta};
     padding: 2vh 1rem;
   }
 
   p {
-    color: var(--meta-color);
+    color: ${props => props.theme.meta};
     font-size: 1rem;
   }
 
   a,
   a:active,
   a:focus {
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     border-bottom: 1px solid green;
     font-size: 1rem;
     font-weight: 700;

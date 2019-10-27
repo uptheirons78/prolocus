@@ -50,10 +50,10 @@ const FooterMenu = () => {
                 <Link to="/convenzioni">Convenzioni</Link>
               </li>
               <li>
-                <Link to="#">Privacy Policy</Link>
+                <Link to="/">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="#">Cookies Policy</Link>
+                <Link to="/">Cookies Policy</Link>
               </li>
             </ul>
           </nav>
@@ -100,11 +100,11 @@ const MainContainer = styled.section`
       h4 {
         font-size: 1.2rem;
         font-weight: 700;
-        color: var(--primary-color-lighter);
+        color: ${props => props.theme.green};
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-bottom: 1rem;
-        border-bottom: 1px solid var(--primary-color-lighter);
+        border-bottom: 1px solid ${props => props.theme.green};
         display: inline-block;
 
         @media screen and (max-width: 700px) {
@@ -123,11 +123,11 @@ const MainContainer = styled.section`
             a,
             a:active,
             a:focus {
-              color: var(--white);
+              color: ${props => props.theme.white};
               transition: all 0.35s ease;
 
               &:hover {
-                color: var(--primary-color-lighter);
+                color: ${props => props.theme.green};
                 letter-spacing: 1px;
               }
             }

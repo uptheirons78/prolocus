@@ -1,11 +1,21 @@
 import React from "react";
 import Layout from "../components/layout";
-import chiSiamoImg from "../images/nepi/nepi-cavatera.jpg";
-import { SectionTitle, SectionSubTitle } from "../components/styled/Typography";
+import thumbnailImg from "../images/nepi/nepi-cavatera.jpg";
+import PageContainer from "../components/styled/PageContainer";
+import Hero from "../components/styled/Hero";
+import {
+  SectionTitle,
+  HeroTitle,
+  HeroSubTitle,
+} from "../components/styled/Typography";
 import SEO from "../components/seo";
 import Fade from "../components/Fade";
 import SlideIn from "../components/SlideIn";
 import styled from "styled-components";
+
+const heroStyle = {
+  backgroundImage: `url(${thumbnailImg})`,
+};
 
 const consiglieri = [
   { titolo: "Presidente", nome: "Fabio Pifferi" },
@@ -29,11 +39,11 @@ const ChiSiamo = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="Chi Siamo" description={subtitle} />
-      <Hero>
+      <Hero style={heroStyle}>
         <div className="content">
           <Fade>
-            <Title>Chi Siamo</Title>
-            <SubTitle>{subtitle}</SubTitle>
+            <HeroTitle>Chi Siamo</HeroTitle>
+            <HeroSubTitle>{subtitle}</HeroSubTitle>
           </Fade>
         </div>
       </Hero>
@@ -59,43 +69,13 @@ const ChiSiamo = ({ location }) => {
 
 export default ChiSiamo;
 
-const Hero = styled.section`
-  background-image: url(${chiSiamoImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 50vh;
-  position: relative;
-  z-index: -1;
-
-  .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-`;
-
-const Title = styled(SectionTitle)`
-  /* color: var(--primary-color-lighter); */
-  color: ${props => props.theme.green};
-  @media screen and (max-width: 600px) {
-    font-size: 2rem;
-  }
-`;
-
 const TitoloOrganigramma = styled(SectionTitle)`
-  color: var(--primary-color-lighter);
+  color: ${props => props.theme.green};
   font-size: 1.8rem;
 `;
 
 const TitleWrapper = styled.div`
-  border-bottom: 1px solid var(--primary-color-lighter);
+  border-bottom: 1px solid ${props => props.theme.green};
   width: 50%;
   padding: 1.5rem;
   margin: 1rem auto;
@@ -105,46 +85,17 @@ const TitleWrapper = styled.div`
   }
 `;
 
-const SubTitle = styled(SectionSubTitle)`
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  color: var(--white);
-  padding: 1rem 2rem;
-`;
-
-const PageContainer = styled.section`
-  max-width: 1200px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -70px;
-  margin-bottom: 10vh;
-  padding: 5vh 5rem 15vh 5rem;
-  background-color: #fff;
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
-
-  @media screen and (max-width: 600px) {
-    padding: 2vh 3rem 10vh 3rem;
-  }
-
-  @media screen and (max-width: 800px) {
-    margin-top: -30px;
-  }
-`;
-
 const TeamMember = styled.article`
   padding: 1rem 3rem;
   text-align: center;
 
   h6 {
     font-size: 1.6rem;
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
   }
 
   p {
     font-size: 1.3rem;
-    color: var(--meta-color);
+    color: ${props => props.theme.meta};
   }
 `;

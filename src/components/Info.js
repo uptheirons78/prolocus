@@ -72,7 +72,7 @@ const InfoContainer = styled(Container)`
 
     p {
       margin: 1rem 0;
-      color: var(--paragraph-color);
+      color: ${props => props.theme.lightBlack};
     }
   }
 

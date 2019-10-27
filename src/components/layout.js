@@ -12,9 +12,11 @@ const theme = {
   darkGreen: "#096432",
   black: "#393939",
   lightBlack: "#5a5a5a",
+  grey: "#e4e4e4",
   meta: "#a7a7a7",
   white: "#edf0f1",
   maxWidth: "1000px",
+  gtc270: "repeat(auto-fill, minmax(270px, 1fr))",
   bsl:
     "0px 70px 40px -50px rgba(0, 0, 0, 0.4), 0px 3px 20px 8px rgba(0, 0, 0, 0.2)",
   bsh:

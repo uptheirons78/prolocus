@@ -8,17 +8,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-
-  :root {
-  --primary-color: #096432;
-  --primary-color-lighter: #28a745;
-  --heading-color: #606060;
-  --paragraph-color: #5A5A5A;
-  --meta-color: #A7A7A7;
-  --pro-green: #096432;
-  --loco-green: #3AAA35;
-  --white: #edf0f1;
-  }
   *,
   *::before,
   *::after {

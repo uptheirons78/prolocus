@@ -55,7 +55,7 @@ const AlbergoCard = styled(ArticleCard)`
   }
 
   strong {
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
   }
 
   .caption {

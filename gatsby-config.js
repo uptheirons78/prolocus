@@ -64,8 +64,8 @@ module.exports = {
         name: `proloco nepi`,
         short_name: `proloco-nepi`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#393939`,
+        theme_color: `#393939`,
         display: `minimal-ui`,
         icon: `src/images/favicon-64x64.png`, // This path is relative to the root of the site.
       },

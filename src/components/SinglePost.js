@@ -27,7 +27,7 @@ const PostHero = styled.section`
 `;
 
 const Title = styled(SectionTitle)`
-  color: var(--primary-color-lighter);
+  color: ${props => props.theme.green};
 
   @media screen and (max-width: 600px) {
     font-size: 2rem;
@@ -69,7 +69,7 @@ const PostFigure = styled.figure`
       position: absolute;
       top: -10px;
       left: 0;
-      border-bottom: 10px solid var(--primary-color);
+      border-bottom: 10px solid ${props => props.theme.darkGreen};
       border-left: 10px solid transparent;
     }
     &:after {
@@ -100,8 +100,7 @@ const PostContainer = styled.section`
   margin-bottom: 10vh;
   padding: 5vh 5rem 15vh 5rem;
   background-color: #fff;
-  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-    0px 3px 20px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: ${props => props.theme.bsl};
   text-align: justify;
 
   @media screen and (max-width: 900px) {
@@ -115,7 +114,7 @@ const PostContainer = styled.section`
   h5,
   h6 {
     padding: 1rem 3rem;
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     line-height: 0.8;
   }
 
@@ -150,13 +149,13 @@ const PostContainer = styled.section`
 
   a,
   a:visited {
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     font-weight: 700;
     transition: all 0.35s ease-in-out;
   }
 
   a:hover {
-    color: var(--primary-color);
+    color: ${props => props.theme.darkGreen};
   }
 
   img {
@@ -167,7 +166,7 @@ const PostContainer = styled.section`
   }
 
   strong {
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     font-weight: 700;
   }
 `;

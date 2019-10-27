@@ -90,10 +90,10 @@ const StyledHeader = styled.header`
 
   h1 {
     font-size: 1.4rem;
-    color: var(--pro-green);
+    color: ${props => props.theme.green};
 
     span {
-      color: var(--loco-green);
+      color: ${props => props.theme.darkGreen};
     }
   }
 
@@ -139,14 +139,14 @@ const StyledHeader = styled.header`
       }
 
       a:hover {
-        color: var(--loco-green);
+        color: ${props => props.theme.darkGreen};
       }
     }
   }
 
   button {
     padding: 9px 25px;
-    background-color: var(--loco-green);
+    background-color: ${props => props.theme.green};
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -155,6 +155,6 @@ const StyledHeader = styled.header`
   }
 
   button:hover {
-    background-color: var(--pro-green);
+    background-color: ${props => props.theme.darkGreen};
   }
 `;

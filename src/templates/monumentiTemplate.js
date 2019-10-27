@@ -10,7 +10,8 @@ import {
   PostContainer,
   PostFigure,
 } from "../components/SinglePost";
-import { useSpring, animated } from "react-spring";
+import SlideInFromLeft from "../components/SlideInFromLeft";
+import Fade from "../components/Fade";
 
 export const query = graphql`
   query($slug: String!) {
@@ -38,21 +39,6 @@ const heroStyle = {
 };
 
 const Monumento = props => {
-  /**
-   * React Spring Animations
-   */
-  const slideIn = useSpring({
-    config: { duration: 1000 },
-    from: { opacity: 0, marginLeft: -500 },
-    to: { opacity: 1, marginLeft: 0 },
-  });
-
-  const fade = useSpring({
-    config: { duration: 2500 },
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  });
-
   /**
    * Variables
    */
@@ -82,13 +68,13 @@ const Monumento = props => {
       <SEO title={titolo} description={description} />
       <PostHero style={heroStyle} className="post-hero">
         <div className="post-hero__content content">
-          <animated.div style={slideIn}>
+          <SlideInFromLeft>
             <Title className="post-hero__title">{titolo}</Title>
-          </animated.div>
+          </SlideInFromLeft>
         </div>
       </PostHero>
       <PostContainer className="post-container">
-        <animated.div style={fade}>
+        <Fade>
           <PostFigure className="post-figure">
             <img
               className="post-figure__thumbnail thumbnail-image"
@@ -109,7 +95,7 @@ const Monumento = props => {
               __html: descrizione.childMarkdownRemark.html,
             }}
           ></div>
-        </animated.div>
+        </Fade>
       </PostContainer>
     </Layout>
   );

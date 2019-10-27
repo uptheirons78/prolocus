@@ -74,7 +74,7 @@ const ContattiTitle = styled(SectionTitle)`
   color: var(--primary-color-lighter);
 `;
 const ContattiSubTitle = styled(SectionSubTitle)`
-  color: #d5d5d5;
+  color: #fff;
 `;
 
 const SectionContatti = styled.section`
@@ -92,7 +92,7 @@ const SectionContatti = styled.section`
 
   .contacts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: ${props => props.theme.gtc270};
     grid-gap: 1.5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -100,13 +100,10 @@ const SectionContatti = styled.section`
 
     .contact-card {
       padding: 4rem 1rem;
-      /* box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.4),
-        0px 3px 20px 8px rgba(0, 0, 0, 0.2); */
-      /* background-color: rgba(0, 0, 0, 0.5); */
 
       h4 {
         font-size: 1.4rem;
-        color: var(--primary-color-lighter);
+        color: ${props => props.theme.green};
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2rem;
@@ -117,7 +114,7 @@ const SectionContatti = styled.section`
       }
 
       p {
-        color: var(--white);
+        color: #fff;
       }
     }
   }

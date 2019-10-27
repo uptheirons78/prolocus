@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import CardEvento from "./CardEvento";
-import { SectionTitle, SectionSubTitle } from "./styled/Typography";
+import { SectionTitle, EventiSectionSubTitle } from "./styled/Typography";
 import Container from "./styled/Container";
 import ArticlesContainer from "./styled/ArticlesContainer";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -46,14 +46,14 @@ const Eventi = () => {
             {({ opacity }) => (
               <Container className="container" style={{ opacity }}>
                 <SectionTitle>Eventi</SectionTitle>
-                <SectionSubTitle>
+                <EventiSectionSubTitle>
                   Le Festività Patronali in onore dei S.S. Romano e Tolomeo, la
                   Sagra del Pecorino Romano e del Salame Cotto, il Natale dei
                   Bambini e la Sagra della Cipolla Nepesina sono soltanto alcuni
                   esempi delle diverse manifestazioni culturali ed
                   enogastronomiche che vengono organizzate annualmente sul
                   nostro territorio.
-                </SectionSubTitle>
+                </EventiSectionSubTitle>
                 <ArticlesContainer>
                   {eventi.map(evento => (
                     <CardEvento key={evento.node.id} data={evento.node} />
@@ -78,7 +78,7 @@ export default Eventi;
 
 const SectionEventi = styled.section`
   width: 100%;
-  background: #fbfbfb;
+  background: ${props => props.theme.grey};
   padding: 3vh 0;
 
   .more {
@@ -87,7 +87,7 @@ const SectionEventi = styled.section`
     font-size: 1.3rem;
     margin-top: 6vh;
     padding: 1rem 3rem;
-    color: var(--primary-color-lighter);
+    color: ${props => props.theme.green};
     font-weight: 400;
     transition: all 0.35s ease;
 

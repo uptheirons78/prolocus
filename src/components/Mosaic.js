@@ -88,14 +88,14 @@ const SectionDiscoverUs = styled.section`
         width: 100%;
         height: 25%;
         transition: all 0.5s ease;
-        color: var(--white);
+        color: ${props => props.theme.white};
         padding: 1rem 1.5rem;
         background-color: rgba(0, 0, 0, 0);
 
         h4 {
           display: inline-block;
           color: #fff;
-          background-color: var(--primary-color-lighter);
+          background-color: ${props => props.theme.green};
           font-weight: 700;
           font-size: 0.8rem;
           margin-bottom: 2rem;
