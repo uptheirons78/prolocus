@@ -1,13 +1,35 @@
 import { createGlobalStyle } from "styled-components";
-import radnikanextFont from "../../static/radnikanext-medium-webfont.woff2";
+import RobotoRegular from "../../static/Roboto-Regular.woff2";
+import RobotoMedium from "../../static/Roboto-Medium.woff2";
+import RobotoBold from "../../static/Roboto-Bold.woff2";
+import RobotoBlack from "../../static/Roboto-Black.woff2";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'radnika_next';
-    src: url(${radnikanextFont}) format('woff2');
-    font-weight: normal;
+    font-family: 'Roboto';
+    src: url(${RobotoRegular}) format('woff2');
+    font-weight: 400;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${RobotoMedium}) format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${RobotoBold}) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${RobotoBlack}) format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+
   *,
   *::before,
   *::after {

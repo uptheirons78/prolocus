@@ -64,9 +64,14 @@ const Ristoranti = ({ location }) => {
       <SlideIn>
         <PageContainer>
           <ArticlesContainer>
-            {ristoranti.map(ristorante => (
-              <CardRistorante key={ristorante.node.id} data={ristorante.node} />
-            ))}
+            {ristoranti
+              .sort(() => Math.random() - 0.5)
+              .map(ristorante => (
+                <CardRistorante
+                  key={ristorante.node.id}
+                  data={ristorante.node}
+                />
+              ))}
           </ArticlesContainer>
         </PageContainer>
       </SlideIn>

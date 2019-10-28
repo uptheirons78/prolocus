@@ -12,11 +12,13 @@ import {
 } from "../components/SinglePost";
 import SlideInFromLeft from "../components/SlideInFromLeft";
 import Fade from "../components/Fade";
+import SocialShare from "../components/SocialShare";
 
 export const query = graphql`
   query($slug: String!) {
     contentfulRistoranti(slug: { eq: $slug }) {
       nome
+      slug
       indirizzo
       orario
       telefono
@@ -50,6 +52,7 @@ const Ristorante = ({ data }) => {
     telefono,
     descrizione,
     immagine,
+    slug,
   } = data.contentfulRistoranti;
 
   /**
@@ -105,6 +108,14 @@ const Ristorante = ({ data }) => {
               __html: descrizione.childMarkdownRemark.html,
             }}
           ></div>
+          <SocialShare
+            socialConfig={{
+              config: {
+                title: { nome },
+                url: `https://proloconepi.netlify.com/dove-mangiare/${slug}`,
+              },
+            }}
+          />
         </Fade>
       </PostContainer>
     </Layout>

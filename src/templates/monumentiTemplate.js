@@ -12,11 +12,13 @@ import {
 } from "../components/SinglePost";
 import SlideInFromLeft from "../components/SlideInFromLeft";
 import Fade from "../components/Fade";
+import SocialShare from "../components/SocialShare";
 
 export const query = graphql`
   query($slug: String!) {
     contentfulMonumenti(slug: { eq: $slug }) {
       titolo
+      slug
       indirizzo
       orari
       descrizione {
@@ -48,6 +50,7 @@ const Monumento = props => {
     orari,
     descrizione,
     immagine,
+    slug,
   } = props.data.contentfulMonumenti;
 
   /**
@@ -95,6 +98,14 @@ const Monumento = props => {
               __html: descrizione.childMarkdownRemark.html,
             }}
           ></div>
+          <SocialShare
+            socialConfig={{
+              config: {
+                title: { titolo },
+                url: `https://proloconepi.netlify.com/cosa-vedere/${slug}`,
+              },
+            }}
+          />
         </Fade>
       </PostContainer>
     </Layout>

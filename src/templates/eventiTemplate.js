@@ -12,11 +12,13 @@ import {
 } from "../components/SinglePost";
 import SlideInFromLeft from "../components/SlideInFromLeft";
 import Fade from "../components/Fade";
+import SocialShare from "../components/SocialShare";
 
 export const query = graphql`
   query($slug: String!) {
     contentfulEventi(slug: { eq: $slug }) {
       titolo
+      slug
       data(formatString: "DD MMM YYYY", locale: "it")
       descrizione {
         descrizione
@@ -41,7 +43,13 @@ const Evento = props => {
   /**
    * Variables
    */
-  const { titolo, data, descrizione, immagine } = props.data.contentfulEventi;
+  const {
+    titolo,
+    data,
+    descrizione,
+    immagine,
+    slug,
+  } = props.data.contentfulEventi;
 
   /**
    * Image: Default or Contentful one
@@ -85,6 +93,14 @@ const Evento = props => {
               __html: descrizione.childMarkdownRemark.html,
             }}
           ></div>
+          <SocialShare
+            socialConfig={{
+              config: {
+                title: { titolo },
+                url: `https://proloconepi.netlify.com/eventi/${slug}`,
+              },
+            }}
+          />
         </Fade>
       </PostContainer>
     </Layout>

@@ -12,11 +12,13 @@ import {
 } from "../components/SinglePost";
 import SlideInFromLeft from "../components/SlideInFromLeft";
 import Fade from "../components/Fade";
+import SocialShare from "../components/SocialShare";
 
 export const query = graphql`
   query($slug: String!) {
     contentfulAlberghi(slug: { eq: $slug }) {
       nome
+      slug
       indirizzo
       telefono
       descrizione {
@@ -48,6 +50,7 @@ const Albergo = ({ data }) => {
     telefono,
     descrizione,
     immagine,
+    slug,
   } = data.contentfulAlberghi;
 
   /**
@@ -97,6 +100,14 @@ const Albergo = ({ data }) => {
               __html: descrizione.childMarkdownRemark.html,
             }}
           ></div>
+          <SocialShare
+            socialConfig={{
+              config: {
+                title: { nome },
+                url: `https://proloconepi.netlify.com/dove-dormire/${slug}`,
+              },
+            }}
+          />
         </Fade>
       </PostContainer>
     </Layout>
