@@ -12,7 +12,7 @@ const CardEvento = props => {
     props.data.immagine !== null ? props.data.immagine.fluid.src : DefaultImg;
 
   return (
-    <ArticleCard>
+    <ArticleCard style={{ background: "#fff" }}>
       <div className="thumbnail">
         <figure>
           <img src={img} alt={props.data.titolo} />

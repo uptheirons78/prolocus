@@ -64,10 +64,10 @@ module.exports = {
         name: `proloco nepi`,
         short_name: `proloco-nepi`,
         start_url: `/`,
-        background_color: `#393939`,
-        theme_color: `#393939`,
+        background_color: `#096432`,
+        theme_color: `#096432`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-64x64.png`, // This path is relative to the root of the site.
+        icon: `src/static/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
