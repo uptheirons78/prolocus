@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import bgImg from "../images/hero/dove-dormire.jpg";
-import defaultImg from "../images/dove-dormire.jpg";
+import bgImg from "../images/template/dove-dormire.jpg";
+import defaultImg from "../images/template/default/dove-dormire.jpg";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import {

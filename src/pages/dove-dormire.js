@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
-import thumbnailImg from "../images/hero/dove-dormire.jpg";
+import thumbnailImg from "../images/pages/dove-dormire.jpg";
 import PageContainer from "../components/styled/PageContainer";
 import Hero from "../components/styled/Hero";
 import { HeroTitle, HeroSubTitle } from "../components/styled/Typography";

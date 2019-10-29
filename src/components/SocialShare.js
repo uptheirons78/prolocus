@@ -52,16 +52,28 @@ export default SocialShare;
 
 const Share = styled.div`
   margin-top: 3rem;
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
   h4 {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 500;
+
+    @media screen and (max-width: 600px) {
+      padding: 1rem 0;
+    }
   }
 `;
 
 const ShareContainer = styled.div`
   display: flex;
   padding: 0 3rem;
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
   .button {
     outline: none;
     margin-right: 0.5rem;

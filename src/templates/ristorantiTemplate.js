@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import bgImg from "../images/hero/mangiare.jpg";
-import defaultImg from "../images/dove-mangiare.jpg";
+import bgImg from "../images/template/dove-mangiare.jpg";
+import defaultImg from "../images/template/default/dove-mangiare.jpg";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import {

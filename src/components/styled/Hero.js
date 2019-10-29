@@ -10,6 +10,10 @@ export default styled.section`
   padding-top: 20rem;
   padding-bottom: 2rem;
 
+  @media (max-width: 500px) {
+    padding-top: 27rem;
+  }
+
   .content {
     position: absolute;
     top: 0;

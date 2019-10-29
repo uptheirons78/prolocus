@@ -1,9 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import image01 from "../images/nepi/nepi-cavatera-03.jpg";
-import image02 from "../images/nepi/nepi-fontana-piazza.jpg";
-import image03 from "../images/nepi/nepi-cavatera.jpg";
-import logo from "../images/website-icon.png";
+import image01 from "../images/hero/large/cavatera-vista-forte-pro.jpg";
+import image02 from "../images/hero/large/fontana-piazza-nepi-pro.jpg";
+import image03 from "../images/hero/large/archi-nepi-pro.jpg";
+import imageMobile01 from "../images/hero/mobile/cavatera-vista-forte-pro__mobile.jpg";
+import imageMobile02 from "../images/hero/mobile/fontana-piazza-nepi-pro__mobile.jpg";
+import imageMobile03 from "../images/hero/mobile/archi-nepi-pro__mobile.jpg";
+import logo from "../images/logo/website-icon.png";
 
 const HeroSlider = () => {
   return (
@@ -52,6 +55,27 @@ const slide = keyframes`
   }
 `;
 
+const slideMobile = keyframes`
+  0% {
+    background-image: url(${imageMobile01});
+  }
+  33% {
+    background-image: url(${imageMobile01});
+  }
+  33.01% {
+    background-image: url(${imageMobile02});
+  }
+  66% {
+    background-image: url(${imageMobile02});
+  }
+  66.01% {
+    background-image: url(${imageMobile03});
+  }
+  100% {
+    background-image: url(${imageMobile03});
+  }
+`;
+
 const SliderContainer = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,15 +84,23 @@ const SliderContainer = styled.section`
   height: 100vh;
   animation: ${slide} 40s infinite;
 
+  @media screen and (max-width: 600px) {
+    animation: ${slideMobile} 40s infinite;
+  }
+
   .load {
     animation: ${slide} 2s;
+
+    @media screen and (max-width: 600px) {
+      animation: ${slideMobile} 2s;
+    }
   }
 
   .content {
     color: #fff;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .principal {

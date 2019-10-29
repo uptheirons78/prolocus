@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import ArticleCard from "../components/styled/ArticleCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import DefaultImg from "../images/default.jpg";
+import DefaultImg from "../images/cards/default/eventi.jpg";
 
 const CardEvento = props => {
   const excerpt = props.data.descrizione.descrizione.slice(0, 120);

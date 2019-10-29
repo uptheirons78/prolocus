@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import bgImg from "../images/pages/eventi.jpg";
-import defaultImg from "../images/default.jpg";
+import bgImg from "../images/template/eventi.jpg";
+import defaultImg from "../images/template/default/eventi.jpg";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import {

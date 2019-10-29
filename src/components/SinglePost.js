@@ -9,10 +9,6 @@ const PostHero = styled.section`
   position: relative;
   z-index: -1;
 
-  @media screen and (max-width: 500px) {
-    min-height: 30vh;
-  }
-
   .content {
     position: absolute;
     top: 0;
@@ -30,7 +26,7 @@ const Title = styled(SectionTitle)`
   color: ${props => props.theme.green};
 
   @media screen and (max-width: 600px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -45,6 +41,10 @@ const PostFigure = styled.figure`
 
   @media screen and (max-width: 900px) {
     height: 300px;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 200px;
   }
 
   .thumbnail-image {
@@ -131,6 +131,10 @@ const PostContainer = styled.section`
   p {
     font-size: 1rem;
     padding: 1rem 3rem;
+
+    @media screen and (max-width: 600px) {
+      padding: 1rem 0.2rem;
+    }
   }
 
   ol {

@@ -13,6 +13,6 @@ export default styled.section`
 
   @media screen and (max-width: 600px) {
     padding: 2vh 3rem 10vh 3rem;
-    margin-top: 0;
+    margin-top: -20px;
   }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import DefaultImg from "../images/pages/convenzioni.jpg";
+import DefaultImg from "../images/cards/default/convenzioni.jpg";
 import styled from "styled-components";
 
 const CardEvento = props => {

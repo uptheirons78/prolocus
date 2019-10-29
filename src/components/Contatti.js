@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./styled/Container";
 import { SectionSubTitle, SectionTitle } from "./styled/Typography";
 import { FiPhoneCall, FiClock, FiMap } from "react-icons/fi";
-import bgImg from "../images/nepi/nepi-forte-dei-borgia-02.jpg";
+import bgImg from "../images/contatti/contatti.jpg";
 import { Spring } from "react-spring/renderprops";
 import VisibilitySensor from "react-visibility-sensor";
 import styled from "styled-components";

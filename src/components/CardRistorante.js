@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import ArticleCard from "../components/styled/ArticleCard";
 import { FaLongArrowAltRight, FaPhone } from "react-icons/fa";
-import DefaultImg from "../images/monumenti-default.jpg";
+import DefaultImg from "../images/cards/default/dove-mangiare.jpg";
 import styled from "styled-components";
 
 const CardRistorante = props => {

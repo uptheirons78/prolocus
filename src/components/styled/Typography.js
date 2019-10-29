@@ -17,8 +17,8 @@ const EventiSectionSubTitle = styled(SectionSubTitle)`
 
 const HeroTitle = styled(SectionTitle)`
   color: ${props => props.theme.green};
-  @media screen and (max-width: 600px) {
-    font-size: 2rem;
+  @media screen and (max-width: 500px) {
+    font-size: 1.7rem;
   }
 `;
 const HeroSubTitle = styled(SectionSubTitle)`
@@ -27,6 +27,10 @@ const HeroSubTitle = styled(SectionSubTitle)`
   margin: 0 auto;
   color: ${props => props.theme.white};
   padding: 1rem 2rem;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 
 export {

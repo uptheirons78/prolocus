@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import bgImg from "../images/hero/monumenti-template.jpg";
-import defaultImg from "../images/default.jpg";
+import bgImg from "../images/template/monumenti.jpg";
+import defaultImg from "../images/template/default/monumenti.jpg";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import {

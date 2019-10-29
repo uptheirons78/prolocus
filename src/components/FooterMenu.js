@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import logo from "../images/website-icon.png";
+import logo from "../images/logo/website-icon.png";
 
 const FooterMenu = () => {
   return (

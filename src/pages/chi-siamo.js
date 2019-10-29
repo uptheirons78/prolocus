@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import thumbnailImg from "../images/nepi/nepi-cavatera.jpg";
+import thumbnailImg from "../images/pages/chi-siamo.jpg";
 import PageContainer from "../components/styled/PageContainer";
 import Hero from "../components/styled/Hero";
 import {

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import thumbnailImg from "../images/nepi/nepi-fontana-piazza.jpg";
+import thumbnailImg from "../images/pages/contatti.jpg";
 import PageContainer from "../components/styled/PageContainer";
 import Hero from "../components/styled/Hero";
 import { HeroTitle, HeroSubTitle } from "../components/styled/Typography";

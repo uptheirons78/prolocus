@@ -1,9 +1,9 @@
-import cosaVedereImg from "../images/nepi/nepi-cavatera-02.jpg";
-import doveDormireImg from "../images/dove-dormire.jpg";
-import doveMangiareImg from "../images/dove-mangiare.jpg";
-import eccellenzeImg from "../images/nepi/eccellenze-locali.jpg";
-import eventiImg from "../images/nepi/nepi-palio-dei-borgia.jpg";
-import convenzioniImg from "../images/nepi/nepi-fontana-piazza.jpg";
+import cosaVedereImg from "../images/mosaic/cosa-vedere.jpg";
+import doveDormireImg from "../images/mosaic/dove-dormire.jpg";
+import doveMangiareImg from "../images/mosaic/dove-mangiare.jpg";
+import eccellenzeImg from "../images/mosaic/eccellenze-locali.jpg";
+import eventiImg from "../images/mosaic/eventi.jpg";
+import convenzioniImg from "../images/mosaic/convenzioni.jpg";
 
 const items = [
   {
