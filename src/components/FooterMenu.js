@@ -50,10 +50,10 @@ const FooterMenu = () => {
                 <Link to="/convenzioni">Convenzioni</Link>
               </li>
               <li>
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/">Cookies Policy</Link>
+                <Link to="/cookies-policy">Cookies Policy</Link>
               </li>
             </ul>
           </nav>

@@ -127,6 +127,9 @@ const PostContainer = styled.section`
   h3 {
     font-size: 1.8rem;
   }
+  h4 {
+    font-size: 1.4rem;
+  }
 
   p {
     font-size: 1rem;
