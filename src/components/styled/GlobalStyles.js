@@ -81,6 +81,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     text-decoration: none;
     outline: none;
+    color: ${props => props.theme.green};
 
   }
 

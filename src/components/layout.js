@@ -40,8 +40,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Header toggler={toggler} siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>

@@ -6,7 +6,7 @@ const Fade = ({ children }) => {
    * React Spring Animations
    */
   const fade = useSpring({
-    config: { duration: 2500 },
+    config: { duration: 1500 },
     from: { opacity: 0 },
     to: { opacity: 1 },
   });
