@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import GlobalStyle from "./styled/GlobalStyles";
 import styled, { ThemeProvider } from "styled-components";
 
 import Header from "./header";
 import FooterMenu from "./FooterMenu";
 import Footer from "./footer";
+
+import CookieConsent from "react-cookie-consent";
+
+// Styles
+const btnStyle = {
+  background: "#FAA916",
+};
 
 const theme = {
   green: "#28a745",
@@ -51,6 +58,27 @@ const Layout = ({ children }) => {
         <MobileToggler onClick={() => setTogglerState(!togglerState)}>
           {togglerContent}
         </MobileToggler>
+        <CookieConsent
+          location="bottom"
+          buttonText="Accetto"
+          buttonStyle={btnStyle}
+          enableDeclineButton
+          declineButtonText="Non Accetto"
+          style={{ background: "rgba(0,0,0,.6)" }}
+          expires={150}
+        >
+          Utilizziamo cookies proprietari per i nostri servizi e cookies di
+          terze parti per abilitare importanti funzionalità del sito. Visualizza
+          la{" "}
+          <Link to="/privacy-policy" className="cookies-link">
+            Privacy Policy
+          </Link>{" "}
+          o la{" "}
+          <Link to="/cookies-policy" className="cookies-link">
+            Cookies Policy
+          </Link>{" "}
+          per saperne di più.
+        </CookieConsent>
       </ThemeProvider>
     </>
   );
