@@ -8,9 +8,11 @@ module.exports = {
     description: `Il sito della Pro Loco Nepi. Ti invitiamo a visitare questo meraviglioso paese della Tuscia immerso nel verde e situato a pochi chilometri da Roma.`,
     author: `@UpTheIrons1978`,
     twitterHandle: "@UpTheIrons1978",
-    url: "https://proloconepi.netlify.com/",
+    url: "https://www.proloconepi.it/",
+    siteUrl: "https://www.proloconepi.it/",
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
