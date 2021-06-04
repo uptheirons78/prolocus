@@ -19,18 +19,16 @@ const heroStyle = {
 
 const consiglieri = [
   { titolo: "Presidente", nome: "Fabio Pifferi" },
-  { titolo: "Vice Presidente", nome: "Massimo Palazzini" },
-  { titolo: "Segretario", nome: "Claudio de Giorgi" },
-  { titolo: "Tesoriere", nome: "Annarosa Fabrizi" },
-  { titolo: "Responsabile Magazzino", nome: "Luigi Albertini" },
-  { titolo: "Consigliere", nome: "Mario Turbesi" },
-  { titolo: "Consigliere", nome: "Maurizio Fagioli" },
-  { titolo: "Consigliere", nome: "Aurelio Neri" },
-  { titolo: "Consigliere", nome: "Antonio Tronca" },
+  { titolo: "Vice Presidente", nome: "Mara Pomi" },
+  { titolo: "Segretario", nome: "Romano Guiducci" },
+  { titolo: "Tesoriere", nome: "Anna Rosa Fabrizi" },
+  { titolo: "Consigliere", nome: "Daniela Ottaviani" },
+  { titolo: "Consigliere", nome: "Massimo Palazzini" },
   { titolo: "Consigliere", nome: "Francesco Marini" },
-  { titolo: "Consigliere", nome: "Esmeralda Lucentini" },
-  { titolo: "Consigliere", nome: "Mara Pomi" },
-  { titolo: "Consigliere", nome: "Roberta Barboni" },
+  { titolo: "Consigliere", nome: "Fausto De Luca" },
+  { titolo: "Consigliere", nome: "Pino Ranieri" },
+  { titolo: "Consigliere", nome: "Fabio Pugliesi" },
+  { titolo: "Consigliere", nome: "Francesco Maria Bizzarri" },
 ];
 
 const ChiSiamo = ({ location }) => {
