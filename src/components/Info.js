@@ -7,7 +7,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import styled from "styled-components";
 
 const Info = () => {
-  const videoUrl = `https://www.youtube.com/embed/XyPNSkb8Hsg`;
+  const videoUrl = `https://www.youtube.com/embed/78yv888XQcQ`;
   return (
     <section className="informazioni" style={{ overflow: "hidden" }}>
       <VisibilitySensor partialVisibility>
